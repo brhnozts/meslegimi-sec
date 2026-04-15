@@ -113,6 +113,55 @@ body {
   color: var(--primary-strong);
 }
 
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  border: 1px solid transparent;
+}
+
+.status-badge .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.55);
+}
+
+.status-badge.ok {
+  background: #ecfdf5;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
+.status-badge.ok .dot {
+  background: #16a34a;
+}
+
+.status-badge.warn {
+  background: #fffbeb;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+.status-badge.warn .dot {
+  background: #f59e0b;
+}
+
+.status-badge.bad {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.status-badge.bad .dot {
+  background: #ef4444;
+}
+
 .display-title {
   font-size: clamp(2.2rem, 4.6vw, 4.6rem);
   line-height: 1.04;

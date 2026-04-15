@@ -2,8 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { getSupabaseHealth } from "@/lib/supabase";
 
+function getBadgeState(health) {
+  if (health.connected) return { label: "Veri bağlantısı açık", variant: "ok" };
+  if (health.configured) return { label: "Veri bağlantısı denetleniyor", variant: "warn" };
+  return { label: "Veri bağlantısı bekleniyor", variant: "bad" };
+}
+
 export async function LandingPage() {
   const supabaseHealth = await getSupabaseHealth();
+  const badge = getBadgeState(supabaseHealth);
 
   return (
     <>
@@ -21,8 +28,9 @@ export async function LandingPage() {
             <div className="glass-panel">
               <div className="d-flex flex-wrap gap-2 align-items-center mb-3">
                 <span className="eyebrow">Canlı Önizleme</span>
-                <span className={`pill ${supabaseHealth.connected ? "text-success" : "text-warning"}`}>
-                  {supabaseHealth.connected ? "Veri bağlantısı açık" : supabaseHealth.configured ? "Veri bağlantısı denetleniyor" : "Veri bağlantısı bekleniyor"}
+                <span className={`status-badge ${badge.variant}`}>
+                  <span className="dot" />
+                  {badge.label}
                 </span>
               </div>
               <Image src="/logo1.png" alt="Mesleğimi Seç logosu" width={720} height={720} className="img-fluid rounded-5 mb-4" />

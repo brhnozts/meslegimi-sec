@@ -2,8 +2,15 @@ import { getProjectSnapshot } from "@/lib/project-data";
 import { getSupabaseHealth } from "@/lib/supabase";
 import { SiteNav } from "./site-nav";
 
+function getBadgeState(health) {
+  if (health.connected) return { label: "Bağlantı aktif", variant: "ok" };
+  if (health.configured) return { label: "Bağlantı kontrol ediliyor", variant: "warn" };
+  return { label: "Bağlantı bekleniyor", variant: "bad" };
+}
+
 export async function DashboardPage() {
   const [snapshot, supabaseHealth] = await Promise.all([getProjectSnapshot(), getSupabaseHealth()]);
+  const badge = getBadgeState(supabaseHealth);
 
   return (
     <>
@@ -14,16 +21,9 @@ export async function DashboardPage() {
             <div className="glass-panel">
               <div className="d-flex flex-wrap gap-2 align-items-center mb-3">
                 <span className="eyebrow">Kontrol Merkezi</span>
-                <span className={`pill ${supabaseHealth.connected ? "text-success" : "text-warning"}`}>
-                  <span
-                    className="d-inline-block rounded-circle"
-                    style={{
-                      width: "10px",
-                      height: "10px",
-                      background: supabaseHealth.connected ? "#16a34a" : "#f59e0b"
-                    }}
-                  />
-                  {supabaseHealth.connected ? "Bağlantı aktif" : supabaseHealth.configured ? "Bağlantı kontrol ediliyor" : "Bağlantı bekleniyor"}
+                <span className={`status-badge ${badge.variant}`}>
+                  <span className="dot" />
+                  {badge.label}
                 </span>
               </div>
               <h1 className="display-title">
@@ -40,7 +40,10 @@ export async function DashboardPage() {
                   {supabaseHealth.connected ? "Hazır" : supabaseHealth.configured ? "Kontrol Edildi" : "Anahtar Bekleniyor"}
                 </div>
                 <div className="mb-3">
-                  <span className="score-badge">
+                  <span
+                    className={`status-badge ${supabaseHealth.connected ? "ok" : supabaseHealth.configured ? "warn" : "bad"}`}
+                  >
+                    <span className="dot" />
                     {supabaseHealth.connected ? "Online" : supabaseHealth.configured ? "Kısmi" : "Boş"}
                   </span>
                 </div>
