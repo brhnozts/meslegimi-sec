@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getSupabaseHealth } from "@/lib/supabase";
 
-export function LandingPage() {
+export async function LandingPage() {
+  const supabaseHealth = await getSupabaseHealth();
+
   return (
     <>
       <nav className="navbar navbar-expand-lg sticky-top site-navbar">
@@ -16,6 +19,12 @@ export function LandingPage() {
         <div className="container">
           <div className="page-grid">
             <div className="glass-panel">
+              <div className="d-flex flex-wrap gap-2 align-items-center mb-3">
+                <span className="eyebrow">Canlı Önizleme</span>
+                <span className={`pill ${supabaseHealth.connected ? "text-success" : "text-warning"}`}>
+                  {supabaseHealth.connected ? "Veri bağlantısı açık" : supabaseHealth.configured ? "Veri bağlantısı denetleniyor" : "Veri bağlantısı bekleniyor"}
+                </span>
+              </div>
               <Image src="/logo1.png" alt="Mesleğimi Seç logosu" width={720} height={720} className="img-fluid rounded-5 mb-4" />
               <h1 className="display-title">
                 <span className="grad-text">Mesleğimi</span> daha kısa adımlarla <span className="grad-text">keşfet</span>.

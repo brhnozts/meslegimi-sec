@@ -12,7 +12,20 @@ export async function DashboardPage() {
         <div className="container">
           <div className="dashboard-hero">
             <div className="glass-panel">
-              <span className="eyebrow mb-3">Kontrol Merkezi</span>
+              <div className="d-flex flex-wrap gap-2 align-items-center mb-3">
+                <span className="eyebrow">Kontrol Merkezi</span>
+                <span className={`pill ${supabaseHealth.connected ? "text-success" : "text-warning"}`}>
+                  <span
+                    className="d-inline-block rounded-circle"
+                    style={{
+                      width: "10px",
+                      height: "10px",
+                      background: supabaseHealth.connected ? "#16a34a" : "#f59e0b"
+                    }}
+                  />
+                  {supabaseHealth.connected ? "Bağlantı aktif" : supabaseHealth.configured ? "Bağlantı kontrol ediliyor" : "Bağlantı bekleniyor"}
+                </span>
+              </div>
               <h1 className="display-title">
                 <span className="grad-text">Proje yönetimi</span> ve veri takibi için dashboard
               </h1>
@@ -25,6 +38,11 @@ export async function DashboardPage() {
                 <div className="dashboard-status-label">Supabase Durumu</div>
                 <div className="dashboard-status-value">
                   {supabaseHealth.connected ? "Hazır" : supabaseHealth.configured ? "Kontrol Edildi" : "Anahtar Bekleniyor"}
+                </div>
+                <div className="mb-3">
+                  <span className="score-badge">
+                    {supabaseHealth.connected ? "Online" : supabaseHealth.configured ? "Kısmi" : "Boş"}
+                  </span>
                 </div>
                 <p className="muted-text mb-0">{supabaseHealth.message}</p>
               </div>
