@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesleğimi Seç</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg1: #f7fbff;
+      --bg2: #eef8f2;
+      --card: rgba(255,255,255,.9);
+      --text: #1f2a44;
+      --muted: #667085;
+      --primary: #4f46e5;
+      --primary2: #22c55e;
+      --shadow: 0 18px 45px rgba(31,42,68,.12);
+      --radius: 24px;
+    }
+    body {
+      font-family: Inter, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #dbeafe 0%, transparent 32%),
+        radial-gradient(circle at top right, #dcfce7 0%, transparent 28%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+    }
+    .navbar { backdrop-filter: blur(14px); background: rgba(255,255,255,.82); border-bottom: 1px solid rgba(255,255,255,.6); }
+    .hero { padding: 84px 0 42px; }
+    .hero-card,.glass-card { background: var(--card); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.7); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .hero-card,.glass-card { padding: 28px; }
+    .display-title { font-size: clamp(2rem, 4vw, 4rem); font-weight: 800; line-height: 1.08; letter-spacing: -.03em; }
+    .lead-soft,.section-text,.mini-text { color: var(--muted); }
+    .brand-badge,.pill,.tag { display: inline-flex; align-items: center; gap: 8px; background: white; border: 1px solid #e5e7eb; border-radius: 999px; padding: 8px 14px; box-shadow: 0 6px 20px rgba(0,0,0,.04); }
+    .step-chip { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), #7c3aed); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; box-shadow: 0 12px 26px rgba(79,70,229,.24); }
+    .section-space { padding: 28px 0 70px; }
+    .section-title { font-size: clamp(1.5rem, 2.2vw, 2.3rem); font-weight: 800; margin-bottom: 8px; }
+    .choice-card { border: 2px solid transparent; border-radius: 18px; padding: 16px; background: white; cursor: pointer; transition: .22s ease; height: 100%; box-shadow: 0 8px 20px rgba(15,23,42,.06); }
+    .choice-card:hover { transform: translateY(-2px); border-color: #c7d2fe; }
+    .choice-card.active { border-color: var(--primary); background: linear-gradient(180deg, #eef2ff, #fff); box-shadow: 0 12px 30px rgba(79,70,229,.16); }
+    .choice-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; background: #eef2ff; margin-bottom: 12px; }
+    .mini-title { font-weight: 700; font-size: 1.02rem; margin-bottom: 6px; }
+    .question-panel { display: none; }
+    .question-panel.active { display: block; animation: fadeUp .25s ease; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: translateY(0);} }
+    .progress-wrap { background: #edf2f7; border-radius: 999px; height: 12px; overflow: hidden; }
+    .progress-bar-custom { height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--primary), var(--primary2)); transition: width .25s ease; }
+    .soft-result,.profile-card,.group-card { background: white; border-radius: 20px; border: 1px solid #edf2f7; box-shadow: 0 8px 22px rgba(15,23,42,.05); }
+    .soft-result,.group-card { padding: 18px; }
+    .score-badge { font-size: .9rem; border-radius: 999px; padding: 8px 12px; background: #ecfeff; color: #155e75; font-weight: 700; }
+    .profile-card { overflow: hidden; height: 100%; }
+    .profile-top { padding: 22px; color: #fff; }
+    .profile-body { padding: 20px; }
+    .tag { padding: 7px 11px; font-size: .84rem; margin: 0 6px 8px 0; font-weight: 600; box-shadow: none; }
+    .career-logo { width: 44px; height: 44px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 1.2rem; color: #fff; box-shadow: 0 10px 24px rgba(0,0,0,.12); animation: floatLogo 2.8s ease-in-out infinite; }
+    .career-logo-sm { width: 34px; height: 34px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; margin-right: 8px; font-size: 1rem; color: #fff; box-shadow: 0 8px 18px rgba(0,0,0,.1); animation: pulseLogo 2.4s ease-in-out infinite; }
+    .title-with-logo { display: flex; align-items: center; }
+    @keyframes floatLogo { 0%,100% { transform: translateY(0px) scale(1); } 50% { transform: translateY(-4px) scale(1.04); } }
+    @keyframes pulseLogo { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+    .list-clean { padding-left: 1.1rem; color: var(--muted); }
+    .footer-box { background: linear-gradient(135deg, #111827, #1f2937); color: white; border-radius: 30px; padding: 28px; box-shadow: var(--shadow); }
+    .hidden-anchor { position: relative; top: -95px; visibility: hidden; }
+    .filter-bar { display:grid; grid-template-columns: 1.2fr 1fr 1fr auto; gap:12px; }
+    .detail-tabs { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 20px; }
+    .detail-tab-btn { border:1px solid #dbe4f0; background:#fff; color:var(--text); padding:10px 14px; border-radius:999px; font-weight:600; cursor:pointer; transition:.2s ease; }
+    .detail-tab-btn:hover { transform:translateY(-1px); border-color:#c7d2fe; }
+    .detail-tab-btn.active { background:linear-gradient(135deg,#eef2ff,#f8fafc); border-color:#6366f1; color:#3730a3; box-shadow:0 8px 20px rgba(99,102,241,.12); }
+    .detail-tab-panel { display:none; }
+    .detail-tab-panel.active { display:block; animation:fadeUp .22s ease; }
+    .info-grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:16px; }
+    @media (max-width: 991px) { .info-grid { grid-template-columns: 1fr; } }
+    .soft-block { border:1px solid #edf2f7; background:#fbfdff; border-radius:18px; padding:16px; }
+
+    /* Section title styling (Tanım, Programlar, vb.) */
+    .profile-body h5, .profile-body h6 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #eef2ff, #f8fafc);
+      border-left: 4px solid #6366f1;
+      color: #3730a3;
+      display: inline-block;
+    }
+
+    .soft-block h5, .soft-block h6 {
+      width: 100%;
+    }
+
+    .profile-body h6 {
+      font-size: 0.95rem;
+      opacity: 0.95;
+    }
+    @media (max-width: 991px) { .filter-bar { grid-template-columns: 1fr; } }
+    .subgroup-wrap { border-top: 1px solid #eef2f7; padding-top: 14px; margin-top: 14px; }
+    .career-line { border: 1px solid #edf2f7; border-radius: 16px; padding: 14px; background: #fbfdff; }
+    code.inline-code { background: #f3f4f6; border-radius: 8px; padding: 2px 7px; }
+    @media (max-width: 767px) { .hero { padding-top: 72px; } .hero-card,.glass-card { padding: 20px; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand fw-bold" href="#anasayfa">Mesleğimi Seç</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#test-alani">Meslek Testi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sonuc-alani">Sonuçlar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#profil-alani">Meslekler</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="anasayfa">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <span class="brand-badge mb-3">🎓 İlköğretim ve lise öğrencileri için kariyer keşif sitesi</span>
+          <h1 class="display-title">10 soruluk test ile tüm meslekleri grup ve alt gruba göre eşleştirelim.</h1>
+          <p class="lead-soft mt-3">Bu sürüm, meslek verisini site içindeki <strong>JSON veri yapısından</strong> okur. İstersen aynı mantıkla XML de kullanabilirsin. Test sonuçları tüm meslekler üzerinde çalışır ve sonuçlar <strong>grup + alt grup + meslek</strong> düzeyinde listelenir.</p>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a href="#test-alani" class="btn btn-dark btn-lg rounded-pill px-4">Teste Başla</a>
+            <a href="#sonuc-alani" class="btn btn-outline-dark btn-lg rounded-pill px-4">Sonuçları Gör</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero-card">
+            <h4 class="fw-bold mb-3">Veri yapısı nasıl çalışıyor?</h4>
+            <div class="d-flex gap-3 mb-3"><div class="step-chip">1</div><div><div class="fw-semibold">meslekler.json</div><div class="text-secondary">200 mesleği site içine JSON olarak koy.</div></div></div>
+            <div class="d-flex gap-3 mb-3"><div class="step-chip">2</div><div><div class="fw-semibold">10 soruluk test</div><div class="text-secondary">Öğrencinin grup ve ilgi profilini çıkarır.</div></div></div>
+            <div class="d-flex gap-3 mb-3"><div class="step-chip">3</div><div><div class="fw-semibold">Otomatik eşleştirme</div><div class="text-secondary">Tüm meslekler uyum puanına göre sıralanır.</div></div></div>
+            <div class="d-flex gap-3"><div class="step-chip">4</div><div><div class="fw-semibold">Grup ve alt grup sonuçları</div><div class="text-secondary">Sonuçlar ana grup ve alt gruplar halinde gösterilir.</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-space" id="test-alani">
+      <div class="container">
+        <div class="glass-card mb-4">
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+            <div>
+              <h2 class="section-title">Site içi veri kaynağı</h2>
+              <p class="section-text">Meslek verisi önce <code class="inline-code">meslekler.json</code> dosyasından okunur. Dosya yoksa örnek veri kullanılır.</p>
+            </div>
+            <div class="pill" id="dataSourceStatus">Örnek veri aktif</div>
+          </div>
+          <div class="mini-text mt-3">Aynı klasöre <code class="inline-code">meslekler.json</code> koyarsan site otomatik kullanır. Her kayıt için önerilen alanlar: <code class="inline-code">Meslek</code>, <code class="inline-code">Ana Grup</code>, <code class="inline-code">Alt Grup</code>, <code class="inline-code">Tanım</code>, <code class="inline-code">Kısa Açıklama</code>, <code class="inline-code">Gerekli Özellikler</code>, <code class="inline-code">Örnek Bölüm/Program</code>, <code class="inline-code">Örnek Üniversiteler</code>, <code class="inline-code">Çalışma Alanları</code>.</div>
+        </div>
+
+        <div class="glass-card">
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-4">
+            <div>
+              <h2 class="section-title">Öğrenci Dostu Meslek Keşif Testi</h2>
+              <p class="section-text">Sorular basit ama ağırlıklı çalışır. Böylece daha akıllı bir sonuç çıkarır.</p>
+            </div>
+            <div class="pill">📈 İlerleme: <strong id="progressText">1 / 10</strong></div>
+          </div>
+          <div class="progress-wrap mb-4"><div class="progress-bar-custom" id="progressBar"></div></div>
+          <div id="questionsContainer"></div>
+          <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-2">
+            <button class="btn btn-outline-secondary rounded-pill px-4" id="prevBtn" type="button">Geri</button>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-dark rounded-pill px-4" id="restartBtn" type="button">Baştan Başla</button>
+              <button class="btn btn-dark rounded-pill px-4" id="nextBtn" type="button">İleri</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space pt-0" id="sonuc-alani">
+      <div class="container">
+        <div class="glass-card mb-4">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-4">
+              <h2 class="section-title">Profil Sonucun</h2>
+              <p class="section-text mb-3">Ana alan, kişilik tipi ve puan dağılımı.</p>
+              <div class="soft-result mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <strong>Ana yatkınlık</strong>
+                  <span class="score-badge" id="mainTypeBadge">Test bekleniyor</span>
+                </div>
+                <p class="mini-text mb-0" id="mainTypeText">Sorular cevaplandıkça burada yorum oluşur.</p>
+              </div>
+              <div class="soft-result mb-3">
+                <div class="fw-semibold mb-2">Mini kişilik tipi</div>
+                <div class="score-badge" id="personalityBadge">Henüz oluşmadı</div>
+              </div>
+              <div class="soft-result">
+                <div class="fw-semibold mb-2">Puan dağılımı</div>
+                <div class="mb-2">Sayısal: <strong id="scoreSayisal">0</strong></div>
+                <div class="mb-2">Sözel: <strong id="scoreSozel">0</strong></div>
+                <div class="mb-2">Eşit Ağırlık / Dengeli: <strong id="scoreDengeli">0</strong></div>
+                <div class="mb-3">Yaratıcı: <strong id="scoreYaratici">0</strong></div>
+                <div style="height:220px"><canvas id="resultChart"></canvas></div>
+              </div>
+              <div class="soft-result mt-3">
+                <div class="fw-semibold mb-2">Rapor Çıktısı</div>
+                <div class="mini-text mb-3">Sonuçlarını tek sayfalık kariyer raporu olarak indir.</div>
+                <button class="btn btn-dark rounded-pill" id="downloadPdfBtn" type="button">PDF Raporu İndir</button>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row g-3" id="topResultCards"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-3">
+            <div>
+              <h2 class="section-title">Grup ve Alt Grup Sonuçları</h2>
+              <p class="section-text">Tüm meslekler test sonucuna göre ana grup ve alt gruplar halinde sıralanır.</p>
+            </div>
+            <div class="pill"><span id="careerCountText">0</span> meslek tarandı</div>
+          </div>
+          <div id="groupedResults"></div>
+        </div>
+      </div>
+    </section>
+
+    <span class="hidden-anchor" id="profil-alani"></span>
+    <section class="section-space pt-0">
+      <div class="container">
+        <div class="glass-card">
+          <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-3">
+            <div>
+              <h2 class="section-title">Tüm Meslek Kartları</h2>
+              <p class="section-text">JSON verisindeki bütün meslekleri filtreleyebilir ve arayabilirsin.</p>
+            </div>
+            <div class="pill"><span id="allCareersCount">0</span> kart</div>
+          </div>
+          <div class="soft-result mb-4">
+            <div class="filter-bar">
+              <div>
+                <label class="form-label fw-semibold">Metinsel arama</label>
+                <input id="careerSearchInput" type="text" class="form-control" placeholder="Meslek adı, açıklama, beceri..." />
+              </div>
+              <div>
+                <label class="form-label fw-semibold">Ana grup</label>
+                <select id="groupFilter" class="form-select">
+                  <option value="">Tümü</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label fw-semibold">Alt grup</label>
+                <select id="subGroupFilter" class="form-select">
+                  <option value="">Tümü</option>
+                </select>
+              </div>
+              <div class="d-flex align-items-end">
+                <button id="clearFiltersBtn" type="button" class="btn btn-outline-dark w-100">Filtreyi Temizle</button>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4" id="allCareerCards"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space pt-0">
+      <div class="container"><div id="detailPages"></div></div>
+    </section>
+
+    <section class="section-space pt-0">
+      <div class="container">
+        <div class="footer-box">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-8">
+              <h3 class="fw-bold">Kullanım notu</h3>
+              <p class="mb-0 text-white-50">Bu dosya tek başına açılır. Gerçek kullanımda aynı klasöre <code>meslekler.json</code> eklemen yeterli. JSON yüklenince test tüm meslekler üzerinde çalışır.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"><button class="btn btn-light rounded-pill px-4" id="scrollTopBtn" type="button">Yukarı Çık</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+
+  <script>
+    const questions = [
+      {
+        id: 1, weight: 1.2, title: 'Hangi dersler sana daha eğlenceli geliyor?', subtitle: 'En çok hoşuna gidenleri düşün.',
+        options: [
+          { label: 'Matematik ve fen', icon: '🔢', scores: { sayisal: 3 }, traits: { analiz: 2, teknoloji: 1 } },
+          { label: 'Türkçe ve sosyal dersler', icon: '📚', scores: { sozel: 3 }, traits: { iletisim: 2, hukuk: 1, egitim: 1 } },
+          { label: 'Hepsinden biraz', icon: '⚖️', scores: { dengeli: 3 }, traits: { planlama: 2, organizasyon: 1 } },
+          { label: 'Resim, müzik gibi dersler', icon: '🎨', scores: { yaratici: 3 }, traits: { yaraticilik: 3, tasarim: 1 } }
+        ]
+      },
+      {
+        id: 2, weight: 1.1, title: 'Yeni bir şey öğrenirken nasıl öğrenirsin?', subtitle: 'Sana en uygun yöntemi seç.',
+        options: [
+          { label: 'Deneyerek ve çözerek', icon: '🧪', scores: { sayisal: 2 }, traits: { analiz: 2, saglik: 1 } },
+          { label: 'Okuyarak ve dinleyerek', icon: '📖', scores: { sozel: 2 }, traits: { iletisim: 2, egitim: 1 } },
+          { label: 'Karışık şekilde', icon: '🧠', scores: { dengeli: 2 }, traits: { planlama: 1, organizasyon: 1 } },
+          { label: 'Çizerek, tasarlayarak', icon: '✏️', scores: { yaratici: 2 }, traits: { yaraticilik: 2, tasarim: 2 } }
+        ]
+      },
+      {
+        id: 3, weight: 1.0, title: 'Bir problemle karşılaşınca ne yaparsın?', subtitle: 'İlk tepkini düşün.',
+        options: [
+          { label: 'Çözüm yolları denerim', icon: '🧩', scores: { sayisal: 2 }, traits: { analiz: 2, teknoloji: 1 } },
+          { label: 'Birine anlatırım', icon: '🗣️', scores: { sozel: 2 }, traits: { iletisim: 2 } },
+          { label: 'Hem düşünür hem sorarım', icon: '🤝', scores: { dengeli: 2 }, traits: { organizasyon: 1, iletisim: 1 } },
+          { label: 'Farklı yollar üretirim', icon: '✨', scores: { yaratici: 2 }, traits: { yaraticilik: 2 } }
+        ]
+      },
+      {
+        id: 4, weight: 1.0, title: 'Boş zamanında ne yapmayı seversin?', subtitle: 'En çok yaptığını seç.',
+        options: [
+          { label: 'Bilgisayar / oyun / teknoloji', icon: '💻', scores: { sayisal: 2 }, traits: { teknoloji: 3 } },
+          { label: 'Kitap okumak / konuşmak', icon: '📚', scores: { sozel: 2 }, traits: { iletisim: 2, hukuk: 1 } },
+          { label: 'Farklı şeyler denemek', icon: '🌍', scores: { dengeli: 2 }, traits: { organizasyon: 1, planlama: 1 } },
+          { label: 'Çizim / müzik / video', icon: '🎵', scores: { yaratici: 2 }, traits: { yaraticilik: 2, medya: 1, tasarim: 1 } }
+        ]
+      },
+      {
+        id: 5, weight: 1.1, title: 'İnsanlarla çalışmak sana nasıl geliyor?', subtitle: 'Kendini düşün.',
+        options: [
+          { label: 'Tek başıma daha iyiyim', icon: '🧠', scores: { sayisal: 2 }, traits: { analiz: 1 } },
+          { label: 'İnsanlarla konuşmayı severim', icon: '💬', scores: { sozel: 2 }, traits: { iletisim: 3, egitim: 1 } },
+          { label: 'Ekip çalışması iyidir', icon: '👥', scores: { dengeli: 2 }, traits: { organizasyon: 2, planlama: 1 } },
+          { label: 'Kendi tarzımı ortaya koyarım', icon: '🌈', scores: { yaratici: 2 }, traits: { yaraticilik: 2 } }
+        ]
+      },
+      {
+        id: 6, weight: 1.3, title: 'Aşağıdakilerden hangisi sana daha ilginç?', subtitle: 'En çok merak ettiğini seç.',
+        options: [
+          { label: 'Robotlar ve teknoloji', icon: '🤖', scores: { sayisal: 3 }, traits: { teknoloji: 3, analiz: 1 } },
+          { label: 'İnsan davranışları', icon: '🧠', scores: { sozel: 3 }, traits: { psikoloji: 3, iletisim: 1 } },
+          { label: 'Dünya ve farklı alanlar', icon: '🌎', scores: { dengeli: 3 }, traits: { planlama: 2, organizasyon: 1 } },
+          { label: 'Sanat ve tasarım', icon: '🎨', scores: { yaratici: 3 }, traits: { yaraticilik: 3, tasarim: 2 } }
+        ]
+      },
+      {
+        id: 7, weight: 1.2, title: 'Bir şey üretmek istediğinde ne yaparsın?', subtitle: 'Nasıl üretmeyi seversin?',
+        options: [
+          { label: 'Kod yazarım / sistem kurarım', icon: '⚙️', scores: { sayisal: 2 }, traits: { teknoloji: 3, analiz: 1 } },
+          { label: 'Yazarım / anlatırım', icon: '✍️', scores: { sozel: 2 }, traits: { iletisim: 2, medya: 1 } },
+          { label: 'Plan yaparım', icon: '📊', scores: { dengeli: 2 }, traits: { planlama: 3, organizasyon: 1 } },
+          { label: 'Tasarım yaparım', icon: '🖌️', scores: { yaratici: 2 }, traits: { tasarim: 3, yaraticilik: 1 } }
+        ]
+      },
+      {
+        id: 8, weight: 1.0, title: 'Okulda hangi etkinlik seni daha çok çeker?', subtitle: 'En sevdiğin etkinliği seç.',
+        options: [
+          { label: 'Bilim fuarı', icon: '🔬', scores: { sayisal: 2 }, traits: { analiz: 1, saglik: 1, teknoloji: 1 } },
+          { label: 'Tiyatro / konuşma', icon: '🎭', scores: { sozel: 2 }, traits: { iletisim: 2, medya: 1 } },
+          { label: 'Kulüp çalışmaları', icon: '🏫', scores: { dengeli: 2 }, traits: { organizasyon: 2, egitim: 1 } },
+          { label: 'Resim / müzik etkinliği', icon: '🎨', scores: { yaratici: 2 }, traits: { yaraticilik: 2, tasarim: 1 } }
+        ]
+      },
+      {
+        id: 9, weight: 1.1, title: 'Kendini nasıl tanımlarsın?', subtitle: 'En yakın olanı seç.',
+        options: [
+          { label: 'Mantıklı', icon: '📐', scores: { sayisal: 2 }, traits: { analiz: 2 } },
+          { label: 'İfade gücü yüksek', icon: '📝', scores: { sozel: 2 }, traits: { iletisim: 2, hukuk: 1 } },
+          { label: 'Dengeli', icon: '⚖️', scores: { dengeli: 2 }, traits: { planlama: 1, organizasyon: 1 } },
+          { label: 'Yaratıcı', icon: '🎬', scores: { yaratici: 2 }, traits: { yaraticilik: 2, medya: 1 } }
+        ]
+      },
+      {
+        id: 10, weight: 1.4, title: 'Gelecekte nasıl bir iş yapmak istersin?', subtitle: 'Hayaline en yakın olanı seç.',
+        options: [
+          { label: 'Teknoloji üretmek', icon: '💻', scores: { sayisal: 3 }, traits: { teknoloji: 3, analiz: 1 } },
+          { label: 'İnsanlara rehberlik etmek', icon: '🧑‍🏫', scores: { sozel: 3 }, traits: { egitim: 2, psikoloji: 1, iletisim: 1 } },
+          { label: 'Yönetmek ve planlamak', icon: '📊', scores: { dengeli: 3 }, traits: { planlama: 3, organizasyon: 2 } },
+          { label: 'Sanat üretmek', icon: '🎨', scores: { yaratici: 3 }, traits: { yaraticilik: 3, tasarim: 2, medya: 1 } }
+        ]
+      }
+    ];
+
+    const defaultCareers = [
+      { Meslek: 'Yazılım Geliştirici', 'Ana Grup': 'Sayısal', 'Alt Grup': 'Mühendislik ve Teknoloji', Tanım: 'Kod yazar, yazılım ürünleri geliştirir.', 'Kısa Açıklama': 'Uygulama, web sitesi ve sistem geliştirir.', 'Gerekli Özellikler': 'Analitik düşünme; Sabır; Detay dikkati', 'Örnek Bölüm/Program': 'Bilgisayar Mühendisliği; Yazılım Mühendisliği', 'Örnek Üniversiteler': 'ODTÜ; İTÜ; Boğaziçi', 'Çalışma Alanları': 'Yazılım şirketleri; Bankalar; Startuplar', 'Kaynak 1': 'https://www.btkakademi.gov.tr/' },
+      { Meslek: 'Doktor', 'Ana Grup': 'Sayısal', 'Alt Grup': 'Sağlık ve Tıp', Tanım: 'İnsan sağlığını korur ve tedavi sürecini yürütür.', 'Kısa Açıklama': 'Tanı koyar, tedavi planlar.', 'Gerekli Özellikler': 'Dikkat; Sorumluluk; Sabır', 'Örnek Bölüm/Program': 'Tıp', 'Örnek Üniversiteler': 'Hacettepe; İstanbul Üniversitesi; Ege', 'Çalışma Alanları': 'Hastane; Klinik; Araştırma merkezi', 'Kaynak 1': 'https://www.saglik.gov.tr/' },
+      { Meslek: 'Avukat', 'Ana Grup': 'Sözel', 'Alt Grup': 'Hukuk', Tanım: 'Hukuki danışmanlık yapar ve hakları savunur.', 'Kısa Açıklama': 'Dava takibi ve danışmanlık verir.', 'Gerekli Özellikler': 'İfade gücü; Araştırma; İkna', 'Örnek Bölüm/Program': 'Hukuk', 'Örnek Üniversiteler': 'Ankara; İstanbul; Galatasaray', 'Çalışma Alanları': 'Hukuk bürosu; Şirket; Kamu', 'Kaynak 1': 'https://www.resmigazete.gov.tr/' },
+      { Meslek: 'Öğretmen', 'Ana Grup': 'Sözel', 'Alt Grup': 'Eğitim', Tanım: 'Öğrencilerin öğrenme sürecini destekler.', 'Kısa Açıklama': 'Ders anlatır ve rehberlik eder.', 'Gerekli Özellikler': 'Sabır; İletişim; Empati', 'Örnek Bölüm/Program': 'Eğitim Fakültesi Programları', 'Örnek Üniversiteler': 'Gazi; Marmara; Dokuz Eylül', 'Çalışma Alanları': 'Okul; Kurs; Eğitim kurumları', 'Kaynak 1': 'https://www.meb.gov.tr/' },
+      { Meslek: 'Endüstri Mühendisi', 'Ana Grup': 'Eşit Ağırlık', 'Alt Grup': 'Yönetim ve Planlama', Tanım: 'Süreçleri düzenler ve verimliliği artırır.', 'Kısa Açıklama': 'Sistem kurar, planlama yapar.', 'Gerekli Özellikler': 'Planlama; Analiz; Organizasyon', 'Örnek Bölüm/Program': 'Endüstri Mühendisliği', 'Örnek Üniversiteler': 'Boğaziçi; İTÜ; Yıldız Teknik', 'Çalışma Alanları': 'Fabrika; Danışmanlık; Lojistik', 'Kaynak 1': 'https://yokatlas.yok.gov.tr/' },
+      { Meslek: 'Psikolog', 'Ana Grup': 'Eşit Ağırlık', 'Alt Grup': 'Davranış ve İnsan Bilimleri', Tanım: 'İnsan davranışını inceler ve destek sağlar.', 'Kısa Açıklama': 'Danışmanlık ve gözlem yapar.', 'Gerekli Özellikler': 'Empati; Dinleme; Gözlem', 'Örnek Bölüm/Program': 'Psikoloji', 'Örnek Üniversiteler': 'Boğaziçi; Hacettepe; Ege', 'Çalışma Alanları': 'Danışmanlık merkezi; Okul; Hastane', 'Kaynak 1': 'https://www.yesilay.org.tr/' },
+      { Meslek: 'Grafik Tasarımcı', 'Ana Grup': 'Yaratıcı', 'Alt Grup': 'Tasarım', Tanım: 'Görsel iletişim ürünleri oluşturur.', 'Kısa Açıklama': 'Afiş, logo, sosyal medya tasarımı yapar.', 'Gerekli Özellikler': 'Yaratıcılık; Görsel düşünme; Düzen', 'Örnek Bölüm/Program': 'Grafik Tasarım; Görsel İletişim Tasarımı', 'Örnek Üniversiteler': 'Mimar Sinan; Marmara; Anadolu', 'Çalışma Alanları': 'Ajans; Medya; Serbest çalışma', 'Kaynak 1': 'https://www.behance.net/' },
+      { Meslek: 'Mimar', 'Ana Grup': 'Yaratıcı', 'Alt Grup': 'Mekân ve Yapı Tasarımı', Tanım: 'Yapıları ve yaşam alanlarını tasarlar.', 'Kısa Açıklama': 'Plan, çizim ve proje üretir.', 'Gerekli Özellikler': 'Tasarım; Planlama; Mekân algısı', 'Örnek Bölüm/Program': 'Mimarlık', 'Örnek Üniversiteler': 'İTÜ; YTÜ; MSGSÜ', 'Çalışma Alanları': 'Mimarlık ofisi; Şantiye; Tasarım ofisi', 'Kaynak 1': 'https://www.arkitera.com/' }
+    ];
+
+    let careersData = [];
+    let currentQuestion = 0;
+    const answers = new Array(questions.length).fill(null);
+
+    const questionsContainer = document.getElementById('questionsContainer');
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+    const topResultCards = document.getElementById('topResultCards');
+    const groupedResults = document.getElementById('groupedResults');
+    const allCareerCards = document.getElementById('allCareerCards');
+    const detailPages = document.getElementById('detailPages');
+    const dataSourceStatus = document.getElementById('dataSourceStatus');
+    let resultChartInstance = null;
+    let latestProfile = null;
+    let latestRanked = [];
+    let filteredCareersData = [];
+    let meslekUniversiteData = [];
+    let meslekLiseData = [];
+    let meslekEgitimYollariData = [];
+
+    function slugify(text) {
+      return String(text || '')
+        .toLowerCase()
+        .replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+    }
+
+    function splitList(value) {
+      if (!value) return [];
+      return String(value).split(/\||;|,|•|\n/).map(v => v.trim()).filter(Boolean);
+    }
+
+    function valueByAliases(row, aliases) {
+      for (const alias of aliases) {
+        if (row[alias] !== undefined && row[alias] !== null && String(row[alias]).trim() !== '') return row[alias];
+      }
+      return '';
+    }
+
+    function accentFromGroup(group) {
+      const g = String(group || '').toLowerCase();
+      if (g.includes('say')) return 'linear-gradient(135deg, #4f46e5, #06b6d4)';
+      if (g.includes('söz') || g.includes('soz')) return 'linear-gradient(135deg, #7c3aed, #ec4899)';
+      if (g.includes('eşit') || g.includes('esit') || g.includes('denge')) return 'linear-gradient(135deg, #14b8a6, #3b82f6)';
+      if (g.includes('yarat') || g.includes('tasar') || g.includes('sanat')) return 'linear-gradient(135deg, #ec4899, #8b5cf6)';
+      return 'linear-gradient(135deg, #0f766e, #f59e0b)';
+    }
+
+    function getCareerLogo(career) {
+      const text = `${career.title || ''} ${career.group || ''} ${career.subGroup || ''}`.toLowerCase();
+      if (text.includes('yazılım') || text.includes('yazilim') || text.includes('bilgisayar') || text.includes('veri') || text.includes('yapay zeka')) return { icon: '💻', bg: 'linear-gradient(135deg,#4f46e5,#06b6d4)' };
+      if (text.includes('doktor') || text.includes('hemşire') || text.includes('hemsire') || text.includes('eczacı') || text.includes('eczaci') || text.includes('sağlık') || text.includes('saglik') || text.includes('psikolog')) return { icon: '🩺', bg: 'linear-gradient(135deg,#0ea5e9,#22c55e)' };
+      if (text.includes('avukat') || text.includes('hukuk') || text.includes('hakim') || text.includes('savcı') || text.includes('savci')) return { icon: '⚖️', bg: 'linear-gradient(135deg,#7c3aed,#ec4899)' };
+      if (text.includes('öğretmen') || text.includes('ogretmen') || text.includes('eğitim') || text.includes('egitim')) return { icon: '📚', bg: 'linear-gradient(135deg,#f59e0b,#ef4444)' };
+      if (text.includes('mimar') || text.includes('iç mimar') || text.includes('ic mimar') || text.includes('inşaat') || text.includes('insaat')) return { icon: '🏗️', bg: 'linear-gradient(135deg,#0f766e,#f59e0b)' };
+      if (text.includes('grafik') || text.includes('tasarım') || text.includes('tasarim') || text.includes('sanat') || text.includes('medya') || text.includes('video')) return { icon: '🎨', bg: 'linear-gradient(135deg,#ec4899,#8b5cf6)' };
+      if (text.includes('mühendis') || text.includes('muhendis') || text.includes('teknoloji')) return { icon: '⚙️', bg: 'linear-gradient(135deg,#14b8a6,#3b82f6)' };
+      if (text.includes('yönetim') || text.includes('yonetim') || text.includes('işletme') || text.includes('isletme') || text.includes('endüstri') || text.includes('endustri')) return { icon: '📊', bg: 'linear-gradient(135deg,#14b8a6,#3b82f6)' };
+      return { icon: '✨', bg: accentFromGroup(career.group) };
+    }
+
+    function inferScoreKeysFromCareer(group, subGroup, title) {
+      const text = `${group} ${subGroup} ${title}`.toLowerCase();
+      const keys = [];
+      if (text.includes('sayısal') || text.includes('sayisal') || text.includes('mühendis') || text.includes('tip') || text.includes('sağlık') || text.includes('saglik')) keys.push('sayisal');
+      if (text.includes('sözel') || text.includes('sozel') || text.includes('hukuk') || text.includes('eğitim') || text.includes('egitim') || text.includes('iletişim') || text.includes('iletisim')) keys.push('sozel');
+      if (text.includes('eşit') || text.includes('esit') || text.includes('dengeli') || text.includes('yönetim') || text.includes('yonetim') || text.includes('psikoloji') || text.includes('işletme') || text.includes('isletme')) keys.push('dengeli');
+      if (text.includes('yaratıcı') || text.includes('yaratici') || text.includes('sanat') || text.includes('tasarım') || text.includes('tasarim') || text.includes('medya') || text.includes('mimar')) keys.push('yaratici');
+      return keys.length ? [...new Set(keys)] : ['dengeli'];
+    }
+
+    function inferTraitsFromCareer(title, group, subGroup, skillsText, descText) {
+      const text = `${title} ${group} ${subGroup} ${skillsText} ${descText}`.toLowerCase();
+      const traits = { analiz: 0, teknoloji: 0, iletisim: 0, yaraticilik: 0, tasarim: 0, planlama: 0, organizasyon: 0, saglik: 0, hukuk: 0, egitim: 0, psikoloji: 0, medya: 0 };
+      const add = (keys, trait, val = 2) => { if (keys.some(k => text.includes(k))) traits[trait] += val; };
+      add(['mühendis', 'muhendis', 'veri', 'istatistik', 'analiz'], 'analiz', 3);
+      add(['yazılım', 'yazilim', 'bilgisayar', 'robot', 'teknoloji', 'yapay zeka'], 'teknoloji', 3);
+      add(['öğretmen', 'ogretmen', 'hukuk', 'avukat', 'iletişim', 'iletisim', 'gazeteci', 'yazar'], 'iletisim', 3);
+      add(['tasarım', 'tasarim', 'grafik', 'sanat', 'müzik', 'muzik', 'yarat'], 'yaraticilik', 3);
+      add(['tasarım', 'tasarim', 'mimar', 'iç mimar', 'ic mimar'], 'tasarim', 3);
+      add(['yönetim', 'yonetim', 'endüstri', 'endustri', 'plan', 'işletme', 'isletme'], 'planlama', 3);
+      add(['organizasyon', 'lojistik', 'yönetim', 'yonetim', 'koordinasyon'], 'organizasyon', 3);
+      add(['doktor', 'hemşire', 'hemsire', 'eczacı', 'eczaci', 'sağlık', 'saglik', 'fizyoterapi'], 'saglik', 3);
+      add(['hukuk', 'avukat', 'hakim', 'savcı', 'savci'], 'hukuk', 3);
+      add(['öğretmen', 'ogretmen', 'eğitim', 'egitim', 'rehberlik'], 'egitim', 3);
+      add(['psikolog', 'psikoloji', 'rehberlik', 'danışman', 'danisman'], 'psikoloji', 3);
+      add(['medya', 'gazeteci', 'yazar', 'video', 'sinema', 'televizyon'], 'medya', 3);
+      return traits;
+    }
+
+    function normalizeCareerRow(row, index) {
+      const meslekId = valueByAliases(row, ['ID', 'id', 'Meslek ID', 'MeslekID']) || (index + 1);
+      const title = valueByAliases(row, ['Meslek', 'Meslek Adı', 'MeslekAdi', 'title', 'Title']);
+      if (!title) return null;
+      const group = valueByAliases(row, ['Ana Grup', 'Grup', 'AnaGrup', 'group']) || 'Belirtilmedi';
+      const subGroup = valueByAliases(row, ['Alt Grup', 'AltGrup', 'Sayısal Alt Grup', 'Sözel Alt Grup', 'Sozel Alt Grup', 'EA Alt Grup', 'Yaratıcı Alt Grup', 'Yaratici Alt Grup', 'subGroup']) || 'Belirtilmedi';
+      const who = valueByAliases(row, ['Tanım', 'Tanim', 'Kimler İçin Uygun', 'Kimler Icin Uygun']) || '';
+      const short = valueByAliases(row, ['Kısa Açıklama', 'Kisa Aciklama', 'Açıklama', 'Aciklama']) || who || 'Açıklama eklenebilir.';
+      const skills = splitList(valueByAliases(row, ['Gerekli Özellikler', 'Özellikler', 'Ozellikler']));
+      const departments = splitList(valueByAliases(row, ['Örnek Bölüm/Program', 'Ornek Bolum/Program', 'Bölüm', 'Bolum']));
+      const universities = splitList(valueByAliases(row, ['Örnek Üniversiteler', 'Ornek Universiteler', 'Üniversiteler', 'Universiteler']));
+      const workAreas = splitList(valueByAliases(row, ['Çalışma Alanları', 'Calisma Alanlari', 'Nerelerde Çalışabilir', 'Nerelerde Calisabilir']));
+      const links = ['Kaynak 1', 'Kaynak 2', 'Kaynak 3', 'Kaynak1', 'Kaynak2', 'Kaynak3', 'Link 1', 'Link 2', 'Link 3'].map(k => row[k]).filter(Boolean);
+      return {
+        meslekId,
+        id: `${slugify(title)}-${index}`,
+        title,
+        group,
+        subGroup,
+        type: group,
+        accent: accentFromGroup(group),
+        short,
+        who: who || short,
+        skills: skills.length ? skills : ['Bilgi eklenebilir'],
+        subjects: departments.length ? departments : ['Bilgi eklenebilir'],
+        universities: universities.length ? universities : ['Bilgi eklenebilir'],
+        workAreas: workAreas.length ? workAreas : ['Bilgi eklenebilir'],
+        links: links.map((url, i) => ({ label: `Kaynak ${i + 1}`, url })),
+        scoreKeys: inferScoreKeysFromCareer(group, subGroup, title),
+        traits: inferTraitsFromCareer(title, group, subGroup, skills.join(' '), `${who} ${short}`)
+      };
+    }
+
+    function buildDataFromRows(rows) {
+      return rows.map(normalizeCareerRow).filter(Boolean);
+    }
+
+    function findMeslekUniversiteRecord(career) {
+      if (!meslekUniversiteData || !meslekUniversiteData.length) return null;
+      return meslekUniversiteData.find(item => String(item.meslek_id) === String(career.meslekId) || String(item.meslek).toLocaleLowerCase('tr') === String(career.title).toLocaleLowerCase('tr')) || null;
+    }
+
+    function getUniversityLink(universityName) {
+      const map = {
+        'ODTÜ': 'https://www.metu.edu.tr/',
+        'ORTA DOĞU TEKNİK ÜNİVERSİTESİ': 'https://www.metu.edu.tr/',
+        'İTÜ': 'https://www.itu.edu.tr/',
+        'İSTANBUL TEKNİK ÜNİVERSİTESİ': 'https://www.itu.edu.tr/',
+        'BOĞAZİÇİ ÜNİVERSİTESİ': 'https://www.boun.edu.tr/',
+        'HACETTEPE ÜNİVERSİTESİ': 'https://www.hacettepe.edu.tr/',
+        'ANKARA ÜNİVERSİTESİ': 'https://www.ankara.edu.tr/',
+        'İSTANBUL ÜNİVERSİTESİ': 'https://www.istanbul.edu.tr/',
+        'EGE ÜNİVERSİTESİ': 'https://ege.edu.tr/',
+        'DOKUZ EYLÜL ÜNİVERSİTESİ': 'https://www.deu.edu.tr/',
+        'MARMARA ÜNİVERSİTESİ': 'https://www.marmara.edu.tr/',
+        'GAZİ ÜNİVERSİTESİ': 'https://gazi.edu.tr/',
+        'YILDIZ TEKNİK ÜNİVERSİTESİ': 'https://www.yildiz.edu.tr/',
+        'MİMAR SİNAN GÜZEL SANATLAR ÜNİVERSİTESİ': 'https://www.msgsu.edu.tr/',
+        'ANADOLU ÜNİVERSİTESİ': 'https://www.anadolu.edu.tr/',
+        'GALATASARAY ÜNİVERSİTESİ': 'https://www.gsu.edu.tr/'
+      };
+      const key = String(universityName || '').toLocaleUpperCase('tr').trim();
+      return map[key] || '#';
+    }
+
+    function renderProgramUniversityList(career) {
+      const record = findMeslekUniversiteRecord(career);
+      if (!record || !Array.isArray(record.program_universiteler) || !record.program_universiteler.length) {
+        return '<div class="mini-text">Ek program / üniversite listesi bulunamadı.</div>';
+      }
+      return `
+        <div style="max-height:340px; overflow:auto; padding-right:6px;">
+          ${record.program_universiteler.map(item => `
+            <div class="career-line mb-2 d-flex justify-content-between align-items-center gap-3 flex-wrap">
+              <div class="fw-semibold">${item.program}</div>
+              <div><a class="tag mb-0" href="${getUniversityLink(item.universite)}" target="_blank" rel="noopener">${item.universite}</a></div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function findMeslekLiseRecord(career) {
+      if (!meslekLiseData || !meslekLiseData.length) return null;
+      return meslekLiseData.find(item => String(item.meslek_id) === String(career.meslekId) || String(item.meslek).toLocaleLowerCase('tr') === String(career.title).toLocaleLowerCase('tr')) || null;
+    }
+
+    function renderLiseAlanlari(career) {
+      const record = findMeslekLiseRecord(career);
+      const liseYollari = record ? (record.onerilen_lise_yollari || record.lise_alanlari || []) : [];
+      if (!record || !Array.isArray(liseYollari) || !liseYollari.length) {
+        return '<div class="mini-text">Lise alan / dal bilgisi bulunamadı.</div>';
+      }
+      return `
+        <div class="mt-4">
+          <h6 class="fw-bold">🏫 Lisede Okuyabileceği Alan / Dal</h6>
+          <div class="mini-text mb-2">İlköğretim öğrencileri için önerilen lise yolu aşağıda listelenir.</div>
+          ${liseYollari.map(item => `
+            <div class="career-line mb-2">
+              <div class="fw-semibold">${item.okul_turu ? item.okul_turu + ' / ' : ''}${item.alan || ''}</div>
+              <div class="text-primary small fw-semibold">${item.dal || 'Dal belirtilmedi'}</div>
+              <div class="mini-text mt-1">${item.aciklama || ''}</div>
+              ${item.kategori ? `<div class="mini-text mt-1"><strong>${item.kategori}</strong></div>` : ''}
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function getBestLisePath(career) {
+      const record = findMeslekLiseRecord(career);
+      const yollar = record ? (record.onerilen_lise_yollari || record.lise_alanlari || []) : [];
+      return yollar && yollar.length ? yollar[0] : null;
+    }
+
+    function renderCareerRoadmap(career) {
+      const bestLise = getBestLisePath(career);
+      const firstProgram = (career.subjects && career.subjects[0]) ? career.subjects[0] : 'İlgili üniversite programı';
+      const firstWorkArea = (career.workAreas && career.workAreas[0]) ? career.workAreas[0] : 'İlgili çalışma alanı';
+      return `
+        <div class="mt-4">
+          <h6 class="fw-bold">🗺️ Kariyer Yol Haritası</h6>
+          <div class="mini-text mb-2">Bu mesleğe ulaşmak için örnek bir yol:</div>
+          <div class="career-line mb-2"><strong>1. Ortaokul:</strong> İlgi alanlarını keşfet, kulüplere ve etkinliklere katıl, güçlü olduğun dersleri fark et.</div>
+          <div class="career-line mb-2"><strong>2. Lise:</strong> ${bestLise ? `${bestLise.okul_turu || ''} / ${bestLise.alan || ''}${bestLise.dal ? ` / ${bestLise.dal}` : ''}` : 'Uygun lise alanını seç'}</div>
+          <div class="career-line mb-2"><strong>3. Üniversite:</strong> ${firstProgram}</div>
+          <div class="career-line mb-2"><strong>4. Kariyer:</strong> ${career.title} olarak ${firstWorkArea.toLowerCase()} alanında başlayıp uzmanlaş.</div>
+        </div>
+      `;
+    }
+
+    function getImprovementSuggestions(career) {
+      const text = `${career.title || ''} ${career.group || ''} ${career.subGroup || ''}`.toLowerCase();
+      const suggestions = [];
+      if (text.includes('yazılım') || text.includes('yazilim') || text.includes('bilgisayar') || text.includes('veri') || text.includes('mühendis') || text.includes('muhendis')) {
+        suggestions.push('Matematik ve problem çözme pratiğini artır.');
+        suggestions.push('Basit kodlama, algoritma ve teknoloji projeleri dene.');
+        suggestions.push('Bilgisayar, robotik veya STEM kulüplerine katıl.');
+      }
+      if (text.includes('doktor') || text.includes('sağlık') || text.includes('saglik') || text.includes('eczacı') || text.includes('eczaci') || text.includes('hemşire') || text.includes('hemsire')) {
+        suggestions.push('Fen derslerinde özellikle biyoloji ve kimyaya ağırlık ver.');
+        suggestions.push('İnsanlara yardım etme, sabır ve dikkat becerini geliştir.');
+        suggestions.push('Sağlık temalı belgesel, kulüp veya gönüllü etkinlikleri takip et.');
+      }
+      if (text.includes('avukat') || text.includes('hukuk') || text.includes('gazeteci') || text.includes('öğretmen') || text.includes('ogretmen') || text.includes('psikolog')) {
+        suggestions.push('Okuma, yazma ve kendini ifade etme becerini güçlendir.');
+        suggestions.push('Tartışma, sunum ve konuşma pratiği yap.');
+        suggestions.push('İnsanları dinleme ve empati kurma yönünü geliştir.');
+      }
+      if (text.includes('grafik') || text.includes('tasarım') || text.includes('tasarim') || text.includes('mimar') || text.includes('sanat') || text.includes('medya')) {
+        suggestions.push('Çizim, tasarım ve görsel düşünme becerilerini geliştir.');
+        suggestions.push('Küçük portföy çalışmalarına erkenden başla.');
+        suggestions.push('Sanat, mimarlık ve tasarım örneklerini düzenli incele.');
+      }
+      if (text.includes('işletme') || text.includes('isletme') || text.includes('yönet') || text.includes('yonet') || text.includes('endüstri') || text.includes('endustri') || text.includes('finans')) {
+        suggestions.push('Planlama ve zaman yönetimi becerini geliştir.');
+        suggestions.push('Matematik ile iletişim becerilerini birlikte güçlendir.');
+        suggestions.push('Kulüp, organizasyon ve ekip çalışmalarında görev al.');
+      }
+      if (!suggestions.length) {
+        suggestions.push('Güçlü olduğun dersleri belirleyip düzenli tekrar yap.');
+        suggestions.push('İlgili kulüp, etkinlik ve atölyelere katılarak deneyim kazan.');
+        suggestions.push('Merak ettiğin alanla ilgili videolar, kitaplar ve uzman içerikleri takip et.');
+      }
+      return [...new Set(suggestions)].slice(0, 5);
+    }
+
+    function renderImprovementSuggestions(career) {
+      const suggestions = getImprovementSuggestions(career);
+      return `
+        <div>
+          <h6 class="fw-bold">🚀 Gelişim Önerileri</h6>
+          <div class="mini-text mb-2">Bu mesleğe hazırlanırken işine yarayabilecek öneriler:</div>
+          <ul class="list-clean mb-0">
+            ${suggestions.map(item => `<li class="mb-2">${item}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    }
+
+    function findMeslekEgitimYoluRecord(career) {
+      if (!meslekEgitimYollariData || !meslekEgitimYollariData.length) return null;
+      return meslekEgitimYollariData.find(item => String(item.meslek_id) === String(career.meslekId) || String(item.meslek).toLocaleLowerCase('tr') === String(career.title).toLocaleLowerCase('tr')) || null;
+    }
+
+    function inferOnlisansYollari(career) {
+      const text = `${career.title || ''} ${career.group || ''} ${career.subGroup || ''}`.toLowerCase();
+      if (text.includes('yazılım') || text.includes('yazilim') || text.includes('bilgisayar')) {
+        return [
+          { program: 'Bilgisayar Programcılığı', not: 'Yazılım geliştirmeye uygulamalı giriş için güçlü bir önlisans yoludur.' },
+          { program: 'Web Tasarımı ve Kodlama', not: 'Web odaklı yazılım ve arayüz geliştirmeye giriş sağlar.' }
+        ];
+      }
+      if (text.includes('grafik') || text.includes('tasarım') || text.includes('tasarim') || text.includes('medya')) {
+        return [
+          { program: 'Grafik Tasarımı', not: 'Tasarım araçları ve görsel iletişim için uygun bir önlisans yoludur.' },
+          { program: 'Görsel İletişim', not: 'Medya ve dijital tasarım odaklı temel oluşturabilir.' }
+        ];
+      }
+      if (text.includes('sağlık') || text.includes('saglik') || text.includes('doktor') || text.includes('ecz')) {
+        return [
+          { program: 'Tıbbi Dokümantasyon ve Sekreterlik', not: 'Sağlık sektörüne daha kısa sürede giriş için uygun olabilir.' },
+          { program: 'İlk ve Acil Yardım', not: 'Sağlık alanında uygulamalı bir önlisans alternatifidir.' }
+        ];
+      }
+      if (text.includes('işletme') || text.includes('isletme') || text.includes('finans') || text.includes('muhasebe') || text.includes('yönet') || text.includes('yonet')) {
+        return [
+          { program: 'İşletme Yönetimi', not: 'İş hayatı ve ofis süreçlerine uygulamalı geçiş sağlar.' },
+          { program: 'Muhasebe ve Vergi Uygulamaları', not: 'Finans ve muhasebe odaklı önlisans alternatifidir.' }
+        ];
+      }
+      if (text.includes('mimar') || text.includes('inşaat') || text.includes('insaat') || text.includes('harita')) {
+        return [
+          { program: 'İnşaat Teknolojisi', not: 'Yapı ve uygulama süreçlerine teknik temel sağlar.' },
+          { program: 'Harita ve Kadastro', not: 'Ölçme, proje ve saha süreçlerine giriş olabilir.' }
+        ];
+      }
+      if (text.includes('avukat') || text.includes('hukuk')) {
+        return [
+          { program: 'Adalet', not: 'Hukuk büro ve adli süreçlerine daha kısa eğitim yoluyla giriş sağlar.' }
+        ];
+      }
+      return [
+        { program: 'İlgili MYO Programı', not: 'Bu meslek için uygun bir önlisans alternatifi araştırılabilir.' }
+      ];
+    }
+
+    function inferLisansYollari(career) {
+      const programs = (career.subjects || []).filter(Boolean);
+      if (programs.length) return programs.slice(0, 4).map(item => ({ program: item, not: 'Bu meslek için öne çıkan lisans/üniversite programlarından biridir.' }));
+      return [{ program: 'İlgili Lisans Programı', not: 'Bu meslek için ilgili lisans programları araştırılabilir.' }];
+    }
+
+    function renderThreePathCareerSystem(career) {
+      const official = findMeslekEgitimYoluRecord(career);
+      const liseKayit = findMeslekLiseRecord(career);
+      const liseYollari = official?.lise_yollari || official?.lise || official?.lise_yolu || (liseKayit ? (liseKayit.onerilen_lise_yollari || liseKayit.lise_alanlari || []) : []);
+      const onlisansYollari = official?.onlisans_yollari || official?.onlisans || inferOnlisansYollari(career);
+      const lisansYollari = official?.lisans_yollari || official?.lisans || inferLisansYollari(career);
+
+      const renderPathCard = (title, icon, items, emptyText) => `
+        <div class="soft-block h-100">
+          <h6 class="fw-bold">${icon} ${title}</h6>
+          ${items && items.length ? items.map(item => `
+            <div class="career-line mb-2">
+              <div class="fw-semibold">${item.okul_turu ? item.okul_turu + ' / ' : ''}${item.alan || item.program || item.baslik || 'Yol bilgisi'}</div>
+              ${item.dal ? `<div class="text-primary small fw-semibold">${item.dal}</div>` : ''}
+              <div class="mini-text mt-1">${item.aciklama || item.not || 'Açıklama eklenebilir.'}</div>
+              ${item.kategori ? `<div class="mini-text mt-1"><strong>${item.kategori}</strong></div>` : ''}
+            </div>
+          `).join('') : `<div class="mini-text">${emptyText}</div>`}
+        </div>
+      `;
+
+      return `
+        <div class="mt-4">
+          <h6 class="fw-bold">🧭 3 Yollu Kariyer Sistemi</h6>
+          <div class="mini-text mb-3">Bu mesleğe ulaşmak için lise, önlisans ve lisans düzeyinde farklı eğitim yolları aşağıda gösterilir.</div>
+          <div class="info-grid">
+            ${renderPathCard('Lise Yolu', '🏫', liseYollari, 'Lise yolu bilgisi bulunamadı.')}
+            ${renderPathCard('Önlisans Yolu', '🎓', onlisansYollari, 'Önlisans yolu bilgisi bulunamadı.')}
+            ${renderPathCard('Lisans Yolu', '🏛️', lisansYollari, 'Lisans yolu bilgisi bulunamadı.')}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderQuestions() {
+      questionsContainer.innerHTML = questions.map((q, qIndex) => `
+        <div class="question-panel ${qIndex === currentQuestion ? 'active' : ''}">
+          <div class="mb-4">
+            <div class="pill mb-3">Adım ${qIndex + 1}</div>
+            <h3 class="fw-bold mb-2">${q.title}</h3>
+            <p class="text-secondary mb-0">${q.subtitle}</p>
+          </div>
+          <div class="row g-3">
+            ${q.options.map((opt, optIndex) => `
+              <div class="col-md-6">
+                <div class="choice-card ${answers[qIndex] === optIndex ? 'active' : ''}" data-q="${qIndex}" data-o="${optIndex}">
+                  <div class="choice-icon">${opt.icon}</div>
+                  <div class="mini-title">${opt.label}</div>
+                  <p class="mini-text">Bu cevap sana yakınsa seçebilirsin.</p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+
+      document.querySelectorAll('.choice-card').forEach(card => {
+        card.addEventListener('click', () => selectAnswer(Number(card.dataset.q), Number(card.dataset.o)));
+      });
+      updateProgress();
+      updateButtons();
+    }
+
+    function selectAnswer(questionIndex, optionIndex) {
+      answers[questionIndex] = optionIndex;
+      renderQuestions();
+      calculateResults();
+    }
+
+    function updateProgress() {
+      progressText.textContent = `${currentQuestion + 1} / ${questions.length}`;
+      progressBar.style.width = `${((currentQuestion + 1) / questions.length) * 100}%`;
+    }
+
+    function updateButtons() {
+      document.getElementById('prevBtn').disabled = currentQuestion === 0;
+      document.getElementById('nextBtn').textContent = currentQuestion === questions.length - 1 ? 'Sonucu Gör' : 'İleri';
+    }
+
+    function nextQuestion() {
+      if (answers[currentQuestion] === null) {
+        alert('Lütfen bu adım için bir seçenek seç.');
+        return;
+      }
+      if (currentQuestion < questions.length - 1) {
+        currentQuestion += 1;
+        renderQuestions();
+      } else {
+        calculateResults();
+        document.getElementById('sonuc-alani').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestion > 0) {
+        currentQuestion -= 1;
+        renderQuestions();
+      }
+    }
+
+    function resetQuiz() {
+      currentQuestion = 0;
+      for (let i = 0; i < answers.length; i++) answers[i] = null;
+      renderQuestions();
+      calculateResults();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function calculateProfile() {
+      const groups = { sayisal: 0, sozel: 0, dengeli: 0, yaratici: 0 };
+      const traits = { analiz: 0, teknoloji: 0, iletisim: 0, yaraticilik: 0, tasarim: 0, planlama: 0, organizasyon: 0, saglik: 0, hukuk: 0, egitim: 0, psikoloji: 0, medya: 0 };
+
+      answers.forEach((answerIndex, qIndex) => {
+        if (answerIndex === null) return;
+        const question = questions[qIndex];
+        const selected = question.options[answerIndex];
+        const weight = question.weight || 1;
+
+        Object.entries(selected.scores || {}).forEach(([key, value]) => {
+          groups[key] += value * weight;
+        });
+        Object.entries(selected.traits || {}).forEach(([key, value]) => {
+          traits[key] += value * weight;
+        });
+      });
+
+      groups.sayisal *= 1.2;
+      groups.sozel *= 1.1;
+      groups.yaratici *= 1.15;
+      groups.dengeli *= 1.0;
+
+      return { groups, traits };
+    }
+
+    function getMainType(groupScores) {
+      const sorted = Object.entries(groupScores).sort((a, b) => b[1] - a[1]);
+      const [topKey, topValue] = sorted[0];
+      const secondValue = sorted[1][1];
+      if (topValue === 0) return { label: 'Test bekleniyor', text: 'Sorular cevaplandıkça burada yorum oluşur.' };
+      if (topValue - secondValue <= 1.5) return { label: 'Dengeli', text: 'Birden fazla alanın sana yakın görünüyor.' };
+      const map = {
+        sayisal: { label: 'Sayısal', text: 'Analiz, problem çözme ve teknik alanlara yakın görünüyorsun.' },
+        sozel: { label: 'Sözel', text: 'İletişim, anlatım ve insan odaklı alanlara yakın görünüyorsun.' },
+        dengeli: { label: 'Eşit Ağırlık / Dengeli', text: 'Planlama, yönetim ve çok yönlü alanlara yakın görünüyorsun.' },
+        yaratici: { label: 'Yaratıcı', text: 'Tasarım, sanat ve özgün üretim alanlarına yakın görünüyorsun.' }
+      };
+      return map[topKey];
+    }
+
+    function getPersonalityType(groupScores, traits) {
+      const topTrait = Object.entries(traits).sort((a, b) => b[1] - a[1])[0][0];
+      if (groupScores.sayisal >= groupScores.sozel && topTrait === 'teknoloji') return 'Teknoloji Meraklısı Analitik';
+      if (groupScores.sozel >= groupScores.sayisal && (topTrait === 'iletisim' || topTrait === 'egitim')) return 'İletişim Odaklı Rehber';
+      if (groupScores.yaratici >= groupScores.sayisal && (topTrait === 'yaraticilik' || topTrait === 'tasarim')) return 'Yaratıcı Üretici';
+      if (topTrait === 'psikoloji') return 'İnsan Gözlemcisi';
+      if (topTrait === 'planlama' || topTrait === 'organizasyon') return 'Düzen Kurucu Planlayıcı';
+      return 'Dengeli Çok Yönlü';
+    }
+
+    function getTopTraits(traits, limit = 3) {
+      return Object.entries(traits)
+        .sort((a, b) => b[1] - a[1])
+        .filter(([, value]) => value > 0)
+        .slice(0, limit)
+        .map(([key]) => key);
+    }
+
+    function humanTraitName(key) {
+      const map = {
+        analiz: 'analitik düşünme',
+        teknoloji: 'teknoloji merakı',
+        iletisim: 'iletişim gücü',
+        yaraticilik: 'yaratıcılık',
+        tasarim: 'tasarım ilgisi',
+        planlama: 'planlama becerisi',
+        organizasyon: 'organizasyon yeteneği',
+        saglik: 'sağlık alanına ilgi',
+        hukuk: 'adalet ve hukuk ilgisi',
+        egitim: 'öğretme ve rehberlik isteği',
+        psikoloji: 'insan davranışlarını anlama ilgisi',
+        medya: 'medya ve içerik üretimi ilgisi'
+      };
+      return map[key] || key;
+    }
+
+    function buildSmartReason(career, profile, personality) {
+      const matchedGroups = career.scoreKeys.filter(key => (profile.groups[key] || 0) > 0);
+      const topTraits = getTopTraits(profile.traits, 4);
+      const careerStrongTraits = Object.entries(career.traits || {})
+        .sort((a, b) => b[1] - a[1])
+        .filter(([, value]) => value > 0)
+        .map(([key]) => key);
+      const sharedTraits = topTraits.filter(trait => careerStrongTraits.includes(trait)).slice(0, 3);
+
+      const groupTextMap = {
+        sayisal: 'sayısal yönün',
+        sozel: 'sözel yönün',
+        dengeli: 'denge kurabilen ve planlı yapın',
+        yaratici: 'yaratıcı tarafın'
+      };
+
+      let sentence1 = '';
+      if (matchedGroups.length === 1) {
+        sentence1 = `Bu meslek sana uygun görünüyor çünkü ${groupTextMap[matchedGroups[0]] || 'güçlü yönlerin'} bu alanda öne çıkıyor.`;
+      } else if (matchedGroups.length > 1) {
+        const groupNames = matchedGroups.map(g => groupTextMap[g] || g);
+        sentence1 = `Bu meslek sana uygun görünüyor çünkü ${groupNames.join(' ve ')} bu mesleğin ihtiyaçlarıyla örtüşüyor.`;
+      } else {
+        sentence1 = 'Bu meslek sana uygun görünüyor çünkü genel profilin bu alanın beklentileriyle uyumlu.';
+      }
+
+      let sentence2 = '';
+      if (sharedTraits.length >= 2) {
+        sentence2 = `Özellikle ${sharedTraits.map(humanTraitName).join(' ve ')} bu meslekte avantaj sağlayabilir.`;
+      } else if (sharedTraits.length === 1) {
+        sentence2 = `Özellikle ${humanTraitName(sharedTraits[0])} bu meslek için güçlü bir işaret veriyor.`;
+      } else if (topTraits.length >= 2) {
+        sentence2 = `Profilinde öne çıkan ${humanTraitName(topTraits[0])} ve ${humanTraitName(topTraits[1])} bu alana yakın durduğunu gösteriyor.`;
+      } else if (topTraits.length === 1) {
+        sentence2 = `Profilinde öne çıkan ${humanTraitName(topTraits[0])} bu alana yakın durduğunu gösteriyor.`;
+      } else {
+        sentence2 = 'Testte verdiğin cevaplar bu alanla genel bir uyum gösteriyor.';
+      }
+
+      let sentence3 = '';
+      if (personality === 'Teknoloji Meraklısı Analitik') {
+        sentence3 = 'Teknolojiye açık ve çözüm odaklı yapın bu meslekte hızlı gelişmene yardımcı olabilir.';
+      } else if (personality === 'İletişim Odaklı Rehber') {
+        sentence3 = 'İnsanlarla bağ kurabilen yapın bu meslekte fark yaratabilir.';
+      } else if (personality === 'Yaratıcı Üretici') {
+        sentence3 = 'Özgün fikir üretme eğilimin bu mesleğe doğal bir yakınlık sağlıyor.';
+      } else if (personality === 'Düzen Kurucu Planlayıcı') {
+        sentence3 = 'Düzen kurma ve süreç yönetme becerin bu meslekte güçlü bir avantaj olabilir.';
+      } else if (personality === 'İnsan Gözlemcisi') {
+        sentence3 = 'İnsanları anlama ve gözlemleme yönün bu meslekte değerli olabilir.';
+      } else {
+        sentence3 = 'Çok yönlü yapın sayesinde bu mesleğin farklı taraflarına uyum sağlayabilirsin.';
+      }
+
+      return `${sentence1} ${sentence2} ${sentence3}`;
+    }
+
+    function scoreCareer(career, profile) {
+      let total = 0;
+      let reasons = [];
+      career.scoreKeys.forEach(key => {
+        const addScore = (profile.groups[key] || 0) * 5;
+        total += addScore;
+        if (addScore > 0) reasons.push(groupReasonText(key));
+      });
+      Object.entries(career.traits || {}).forEach(([trait, weight]) => {
+        const traitScore = (profile.traits[trait] || 0) * weight;
+        total += traitScore;
+        if (traitScore >= 8) reasons.push(traitReasonText(trait));
+      });
+      const uniqueReasons = [...new Set(reasons)].filter(Boolean);
+      return {
+        score: Math.round(total),
+        matchReason: uniqueReasons.slice(0, 2).join(' + ') || 'Genel profil uyumu'
+      };
+    }
+
+    function groupReasonText(key) {
+      const map = {
+        sayisal: 'Sayısal gücün yüksek',
+        sozel: 'Sözel yönün güçlü',
+        dengeli: 'Dengeli planlama becerin güçlü',
+        yaratici: 'Yaratıcı yönün güçlü'
+      };
+      return map[key] || '';
+    }
+
+    function traitReasonText(key) {
+      const map = {
+        analiz: 'Analitik düşünme öne çıkıyor',
+        teknoloji: 'Teknoloji merakın yüksek',
+        iletisim: 'İletişim becerin öne çıkıyor',
+        yaraticilik: 'Yaratıcılığın yüksek',
+        tasarim: 'Tasarım ilgisi yüksek',
+        planlama: 'Planlama yönün güçlü',
+        organizasyon: 'Organizasyon becerin güçlü',
+        saglik: 'Sağlık alanına ilgin var',
+        hukuk: 'Hukuk ve adalet ilgisi öne çıkıyor',
+        egitim: 'Öğretme ve rehberlik ilgisi var',
+        psikoloji: 'İnsan davranışlarına ilgin yüksek',
+        medya: 'Medya ve içerik üretimi ilgisi var'
+      };
+      return map[key] || '';
+    }
+
+    function calculateRankedCareers(profile) {
+      const personality = getPersonalityType(profile.groups, profile.traits);
+      return careersData.map(career => {
+        const ai = scoreCareer(career, profile);
+        return {
+          ...career,
+          totalScore: ai.score,
+          matchReason: ai.matchReason,
+          smartReason: buildSmartReason(career, profile, personality)
+        };
+      }).sort((a, b) => b.totalScore - a.totalScore);
+    }
+
+    function renderResultChart(profile) {
+      const ctx = document.getElementById('resultChart');
+      if (!ctx) return;
+      if (resultChartInstance) resultChartInstance.destroy();
+      resultChartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Sayısal', 'Sözel', 'Dengeli', 'Yaratıcı'],
+          datasets: [{
+            label: 'Puan',
+            data: [
+              Math.round(profile.groups.sayisal),
+              Math.round(profile.groups.sozel),
+              Math.round(profile.groups.dengeli),
+              Math.round(profile.groups.yaratici)
+            ],
+            borderRadius: 10
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: { y: { beginAtZero: true } }
+        }
+      });
+    }
+
+    async function downloadPdfReport() {
+      if (!latestProfile || !latestRanked.length) {
+        alert('Önce test sonucunu oluştur.');
+        return;
+      }
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      const top = latestRanked.slice(0, 8);
+      let y = 18;
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(18);
+      doc.text('Benim Meslek Raporum', 14, y);
+      y += 10;
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(11);
+      doc.text(`Ana Yatkinlik: ${document.getElementById('mainTypeBadge').textContent}`, 14, y);
+      y += 7;
+      doc.text(`Kisilik Tipi: ${document.getElementById('personalityBadge').textContent}`, 14, y);
+      y += 7;
+      doc.text(`Sayisal: ${Math.round(latestProfile.groups.sayisal)} | Sozel: ${Math.round(latestProfile.groups.sozel)} | Dengeli: ${Math.round(latestProfile.groups.dengeli)} | Yaratici: ${Math.round(latestProfile.groups.yaratici)}`, 14, y);
+      y += 12;
+      doc.setFont('helvetica', 'bold');
+      doc.text('En Uygun Meslekler', 14, y);
+      y += 8;
+      doc.setFont('helvetica', 'normal');
+      top.forEach((item, index) => {
+        if (y > 270) {
+          doc.addPage();
+          y = 18;
+        }
+        doc.setFont('helvetica', 'bold');
+        doc.text(`${index + 1}. ${item.title}`, 14, y);
+        y += 6;
+        doc.setFont('helvetica', 'normal');
+        const lines = doc.splitTextToSize(`${item.group} / ${item.subGroup} | Uyum: ${item.totalScore} | ${item.matchReason}`, 180);
+        doc.text(lines, 14, y);
+        y += lines.length * 5 + 2;
+        const reasonLines = doc.splitTextToSize(item.smartReason || '', 180);
+        doc.text(reasonLines, 14, y);
+        y += reasonLines.length * 5 + 4;
+      });
+      doc.save('benim_meslek_raporum.pdf');
+    }
+
+    function renderTopResults(ranked, personality) {
+      topResultCards.innerHTML = ranked.slice(0, 6).map(item => `
+        <div class="col-md-6">
+          <div class="soft-result h-100">
+            <div class="d-flex justify-content-between align-items-center gap-2 mb-2">
+              <div class="title-with-logo"><span class="career-logo-sm" style="background:${getCareerLogo(item).bg}">${getCareerLogo(item).icon}</span><h5 class="mb-0">${item.title}</h5></div>
+              <span class="score-badge">Uyum: ${item.totalScore}</span>
+            </div>
+            <div class="mb-2 text-primary fw-semibold">${item.group} • ${item.subGroup}</div>
+            <p class="mini-text mb-3">${item.short}</p>
+            <div class="small text-success fw-semibold mb-1">Kişilik uyumu: ${personality}</div>
+            <div class="small text-primary fw-semibold mb-2">AI eşleşme nedeni: ${item.matchReason || 'Genel profil uyumu'}</div>
+            <div class="mini-text mb-3">${item.smartReason || ''}</div>
+            <button class="btn btn-sm btn-outline-dark rounded-pill" type="button" onclick="scrollToCareerDetail('${item.id}')">Detaylı profil</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function groupRankedCareers(ranked) {
+      const grouped = {};
+      ranked.forEach(career => {
+        if (!grouped[career.group]) grouped[career.group] = {};
+        if (!grouped[career.group][career.subGroup]) grouped[career.group][career.subGroup] = [];
+        grouped[career.group][career.subGroup].push(career);
+      });
+      return grouped;
+    }
+
+    function renderGroupedResults(ranked) {
+      const grouped = groupRankedCareers(ranked);
+      document.getElementById('careerCountText').textContent = ranked.length;
+      groupedResults.innerHTML = Object.entries(grouped).map(([groupName, subGroups]) => {
+        const groupTop = Object.values(subGroups).flat().sort((a, b) => b.totalScore - a.totalScore).slice(0, 3);
+        return `
+          <div class="group-card mb-4">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+              <div>
+                <h3 class="fw-bold mb-1">${groupName}</h3>
+                <div class="mini-text">Bu gruptaki tüm meslekler aşağıda alt gruplara göre listelenir.</div>
+              </div>
+              <div class="pill">Toplam ${Object.values(subGroups).flat().length} meslek</div>
+            </div>
+            <div class="row g-3 mb-2">
+              ${groupTop.map(item => `
+                <div class="col-md-4">
+                  <div class="career-line h-100">
+                    <div class="title-with-logo"><span class="career-logo-sm" style="background:${getCareerLogo(item).bg}">${getCareerLogo(item).icon}</span><div class="fw-semibold">${item.title}</div></div>
+                    <div class="mini-text mb-2">${item.subGroup}</div>
+                    <span class="score-badge">${item.totalScore}</span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+            ${Object.entries(subGroups).map(([subGroupName, careers]) => `
+              <div class="subgroup-wrap">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                  <h5 class="mb-0">${subGroupName}</h5>
+                  <span class="tag">Alt grupta ${careers.length} meslek</span>
+                </div>
+                <div class="row g-3">
+                  ${careers.map(item => `
+                    <div class="col-lg-6">
+                      <div class="career-line h-100">
+                        <div class="d-flex justify-content-between align-items-center gap-2 mb-2">
+                          <div class="title-with-logo"><span class="career-logo-sm" style="background:${getCareerLogo(item).bg}">${getCareerLogo(item).icon}</span><div class="fw-semibold">${item.title}</div></div>
+                          <span class="score-badge">${item.totalScore}</span>
+                        </div>
+                        <div class="mini-text mb-2">${item.short}</div>
+                        <a href="#${item.id}" class="btn btn-sm btn-outline-dark rounded-pill">Detay</a>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderAllCareerCards(data = filteredCareersData.length ? filteredCareersData : careersData) {
+      document.getElementById('allCareersCount').textContent = data.length;
+      allCareerCards.innerHTML = data.map(career => {
+        const safeTitle = JSON.stringify(career.title);
+        return `
+        <div class="col-md-6 col-xl-4">
+          <div class="profile-card h-100">
+            <div class="profile-top" style="background:${career.accent};">
+              <div class="small mb-2 opacity-75">${career.group}</div>
+              <div class="title-with-logo"><span class="career-logo" style="background:${getCareerLogo(career).bg}">${getCareerLogo(career).icon}</span><h4 class="fw-bold mb-2">${career.title}</h4></div>
+              <div class="small opacity-75">${career.subGroup}</div>
+            </div>
+            <div class="profile-body d-flex flex-column">
+              <p class="mini-text mb-3">${career.short}</p>
+              <div class="mb-3">
+                <span class="tag">${career.group}</span>
+                <span class="tag">${career.subGroup}</span>
+              </div>
+              <div class="mb-3">${(career.skills || []).slice(0,4).map(item => `<span class="tag">${item}</span>`).join('')}</div>
+              <div class="mt-auto d-flex gap-2 flex-wrap">
+                <button class="btn btn-dark rounded-pill btn-sm" type="button" onclick="scrollToCareerDetail('${career.id}')">Detaylı profil</button>
+                <button class="btn btn-outline-danger rounded-pill btn-sm" type="button" onclick='openVideoSearch(${safeTitle})'>🎥 Video Ara</button>
+                ${career.links && career.links[0] ? `<a href="${career.links[0].url}" target="_blank" rel="noopener" class="btn btn-outline-dark rounded-pill btn-sm">Kaynak</a>` : ''}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      }).join('');
+    }
+
+    function renderDetailPages(data = filteredCareersData.length ? filteredCareersData : careersData) {
+      detailPages.innerHTML = data.map(career => {
+        const safeTitle = JSON.stringify(career.title);
+        return `
+        <div class="profile-card mb-4" id="${career.id}">
+          <div class="profile-top" style="background:${career.accent};">
+            <div class="row g-3 align-items-end">
+              <div class="col-lg-8">
+                <div class="pill bg-white text-dark mb-3">${career.group} • ${career.subGroup}</div>
+                <div class="title-with-logo"><span class="career-logo" style="background:${getCareerLogo(career).bg}">${getCareerLogo(career).icon}</span><h2 class="fw-bold mb-2">${career.title}</h2></div>
+                <p class="mb-0 opacity-75">${career.short}</p>
+              </div>
+              <div class="col-lg-4 text-lg-end"><a href="#profil-alani" class="btn btn-light rounded-pill">Diğer Meslekler</a></div>
+            </div>
+          </div>
+          <div class="profile-body">
+            <div class="detail-tabs" role="tablist" aria-label="Meslek detay sekmeleri">
+              <button class="detail-tab-btn active" type="button" data-tab="genel-${career.id}">Genel Bilgi</button>
+              <button class="detail-tab-btn" type="button" data-tab="egitim-${career.id}">Üniversite Yolu</button>
+              <button class="detail-tab-btn" type="button" data-tab="lise-${career.id}">Lise Yolu</button>
+              <button class="detail-tab-btn" type="button" data-tab="kariyer-${career.id}">Kariyer</button>
+              <button class="detail-tab-btn" type="button" data-tab="gelisim-${career.id}">Gelişim</button>
+            </div>
+
+            <div class="detail-tab-panel active" data-panel="genel-${career.id}">
+              <div class="info-grid">
+                <div class="soft-block">
+                  <h5 class="fw-bold">📘 Tanım</h5>
+                  <p class="text-secondary mb-0">${career.who}</p>
+                </div>
+                <div class="soft-block">
+                  <h5 class="fw-bold">💼 Nerelerde Çalışabilir?</h5>
+                  <ul class="list-clean mb-0">${career.workAreas.map(item => `<li class="mb-2">${item}</li>`).join('')}</ul>
+                </div>
+                <div class="soft-block">
+                  <h6 class="fw-bold">🧠 Gerekli özellikler</h6>
+                  <div>${career.skills.map(item => `<span class="tag">${item}</span>`).join('')}</div>
+                </div>
+                <div class="soft-block">
+                  <h6 class="fw-bold">🎥 Tanıtım Videosu</h6>
+                  <div class="d-grid gap-2 mb-0">
+                    <button class="btn btn-outline-danger rounded-pill text-start" type="button" onclick='openVideoSearch(${safeTitle})'>🎥 ${career.title} için YouTube araması aç</button>
+                  </div>
+                  ${career.links && career.links.length ? `<h6 class="fw-bold mt-4">🔗 Kaynaklar</h6><div class="d-grid gap-2">${career.links.map(link => `<a class="btn btn-outline-dark rounded-pill text-start" href="${link.url}" target="_blank" rel="noopener">${link.label || link.url}</a>`).join('')}</div>` : ''}
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-tab-panel" data-panel="egitim-${career.id}">
+              <div class="soft-block mb-3">
+                <h5 class="fw-bold">🎓 Örnek bölüm / programlar</h5>
+                <div>${career.subjects.map(item => `<span class="tag">${item}</span>`).join('')}</div>
+              </div>
+              <div class="soft-block">
+                <h5 class="fw-bold">🏛️ Program / Üniversite listesi</h5>
+                <div class="mini-text mb-2">Okuyabileceğin programlar ve üniversiteler birlikte listelenir.</div>
+                <div>${renderProgramUniversityList(career)}</div>
+              </div>
+            </div>
+
+            <div class="detail-tab-panel" data-panel="lise-${career.id}">
+              <div class="soft-block">
+                ${renderLiseAlanlari(career)}
+              </div>
+            </div>
+
+            <div class="detail-tab-panel" data-panel="kariyer-${career.id}">
+              <div class="soft-block">
+                ${renderCareerRoadmap(career)}
+              </div>
+              <div class="soft-block mt-3">
+                ${renderThreePathCareerSystem(career)}
+              </div>
+            </div>
+
+            <div class="detail-tab-panel" data-panel="gelisim-${career.id}">
+              <div class="soft-block">
+                ${renderImprovementSuggestions(career)}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      }).join('');
+
+      wireDetailTabs();
+    }
+
+    function calculateResults() {
+      if (!careersData.length) return;
+      const profile = calculateProfile();
+      const mainType = getMainType(profile.groups);
+      const personality = getPersonalityType(profile.groups, profile.traits);
+      const ranked = calculateRankedCareers(profile);
+      latestProfile = profile;
+      latestRanked = ranked;
+      document.getElementById('scoreSayisal').textContent = Math.round(profile.groups.sayisal);
+      document.getElementById('scoreSozel').textContent = Math.round(profile.groups.sozel);
+      document.getElementById('scoreDengeli').textContent = Math.round(profile.groups.dengeli);
+      document.getElementById('scoreYaratici').textContent = Math.round(profile.groups.yaratici);
+      document.getElementById('mainTypeBadge').textContent = mainType.label;
+      document.getElementById('mainTypeText').textContent = mainType.text;
+      document.getElementById('personalityBadge').textContent = personality;
+      renderTopResults(ranked, personality);
+      renderGroupedResults(ranked);
+      renderResultChart(profile);
+    }
+
+    function populateFilterOptions() {
+      const groupSelect = document.getElementById('groupFilter');
+      const subGroupSelect = document.getElementById('subGroupFilter');
+      const groups = [...new Set(careersData.map(c => c.group).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'tr'));
+      const subGroups = [...new Set(careersData.map(c => c.subGroup).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'tr'));
+      groupSelect.innerHTML = '<option value="">Tümü</option>' + groups.map(g => `<option value="${g}">${g}</option>`).join('');
+      subGroupSelect.innerHTML = '<option value="">Tümü</option>' + subGroups.map(g => `<option value="${g}">${g}</option>`).join('');
+    }
+
+    function applyCareerFilters() {
+      const search = (document.getElementById('careerSearchInput').value || '').toLocaleLowerCase('tr');
+      const group = document.getElementById('groupFilter').value;
+      const subGroup = document.getElementById('subGroupFilter').value;
+      filteredCareersData = careersData.filter(career => {
+        const haystack = [career.title, career.group, career.subGroup, career.short, career.who, ...(career.skills || []), ...(career.subjects || []), ...(career.universities || []), ...(career.workAreas || [])].join(' ').toLocaleLowerCase('tr');
+        return (!search || haystack.includes(search)) && (!group || career.group === group) && (!subGroup || career.subGroup === subGroup);
+      });
+      renderAllCareerCards(filteredCareersData);
+      renderDetailPages(filteredCareersData);
+    }
+
+    function clearCareerFilters() {
+      document.getElementById('careerSearchInput').value = '';
+      document.getElementById('groupFilter').value = '';
+      document.getElementById('subGroupFilter').value = '';
+      filteredCareersData = [];
+      renderAllCareerCards(careersData);
+      renderDetailPages(careersData);
+    }
+
+    async function loadMeslekUniversiteJson() {
+      try {
+        const response = await fetch('./meslek_universite.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('meslek_universite.json bulunamadı');
+        meslekUniversiteData = await response.json();
+      } catch (error) {
+        console.warn(error);
+        meslekUniversiteData = [];
+      }
+    }
+
+    async function loadMeslekLiseJson() {
+      try {
+        const response = await fetch('./meslek_lise_resmi.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('meslek_lise_resmi.json bulunamadı');
+        meslekLiseData = await response.json();
+      } catch (error) {
+        console.warn(error);
+        meslekLiseData = [];
+      }
+    }
+
+    async function loadMeslekEgitimYollariJson() {
+      try {
+        const response = await fetch('./meslek_egitim_yollari.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('meslek_egitim_yollari.json bulunamadı');
+        meslekEgitimYollariData = await response.json();
+      } catch (error) {
+        console.warn(error);
+        meslekEgitimYollariData = [];
+      }
+    }
+
+    async function loadCareersFromJson() {
+      try {
+        const response = await fetch('./meslekler.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('JSON bulunamadı');
+        const rows = await response.json();
+        const normalized = buildDataFromRows(rows);
+        if (!normalized.length) throw new Error('JSON boş veya hatalı');
+        careersData = normalized;
+        dataSourceStatus.textContent = `${normalized.length} meslek JSON verisinden yüklendi`;
+      } catch (error) {
+        console.error(error);
+        careersData = buildDataFromRows(fallbackCareers);
+        dataSourceStatus.textContent = `JSON okunamadı, yedek veri aktif (${careersData.length} meslek)`;
+      }
+      await loadMeslekUniversiteJson();
+      await loadMeslekLiseJson();
+      await loadMeslekEgitimYollariJson();
+      filteredCareersData = [];
+      populateFilterOptions();
+      renderAllCareerCards(careersData);
+      renderDetailPages(careersData);
+      calculateResults();
+    }
+
+
+    function scrollToCareerDetail(careerId) {
+      const el = document.getElementById(careerId);
+      if (!el) return;
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (history.replaceState) {
+        history.replaceState(null, '', `#${careerId}`);
+      } else {
+        window.location.hash = careerId;
+      }
+      setTimeout(() => {
+        const oldShadow = el.style.boxShadow;
+        el.style.boxShadow = '0 0 0 3px rgba(99,102,241,.25), 0 18px 45px rgba(31,42,68,.12)';
+        setTimeout(() => {
+          el.style.boxShadow = oldShadow;
+        }, 1800);
+      }, 250);
+    }
+
+    function wireDetailTabs() {
+      document.querySelectorAll('.detail-tabs').forEach(tabWrap => {
+        const buttons = tabWrap.querySelectorAll('.detail-tab-btn');
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-tab');
+            const cardBody = tabWrap.parentElement;
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            cardBody.querySelectorAll('.detail-tab-panel').forEach(panel => {
+              panel.classList.toggle('active', panel.getAttribute('data-panel') === target);
+            });
+          });
+        });
+      });
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', nextQuestion);
+    document.getElementById('prevBtn').addEventListener('click', prevQuestion);
+    document.getElementById('restartBtn').addEventListener('click', resetQuiz);
+    function openVideoSearch(careerTitle) {
+      const query = encodeURIComponent(`${careerTitle} meslek tanıtımı`);
+      const searchUrl = `https://www.youtube.com/results?search_query=${query}`;
+      window.open(searchUrl, '_blank', 'noopener');
+    }
+
+    document.getElementById('scrollTopBtn').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    document.getElementById('downloadPdfBtn').addEventListener('click', downloadPdfReport);
+    document.getElementById('careerSearchInput').addEventListener('input', applyCareerFilters);
+    document.getElementById('groupFilter').addEventListener('change', applyCareerFilters);
+    document.getElementById('subGroupFilter').addEventListener('change', applyCareerFilters);
+    document.getElementById('clearFiltersBtn').addEventListener('click', clearCareerFilters);
+
+    renderQuestions();
+    loadCareersFromJson();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

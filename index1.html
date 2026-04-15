@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesleğimi Seç</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at top left, #dbeafe 0%, transparent 32%),
+        radial-gradient(circle at top right, #dcfce7 0%, transparent 28%),
+        linear-gradient(135deg,#eef2ff,#ecfeff);
+      font-family: Inter, Arial, sans-serif;
+      color: #1f2a44;
+    }
+    .card-choice {
+      border-radius: 26px;
+      padding: 42px 30px;
+      text-align: center;
+      cursor: pointer;
+      transition: .28s ease;
+      height: 100%;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(255,255,255,.8);
+      box-shadow: 0 18px 45px rgba(31,42,68,.12);
+    }
+    .card-choice:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(31,42,68,.16);
+    }
+    .icon {
+      width: 86px;
+      height: 86px;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 2.2rem;
+      background: linear-gradient(135deg,#eef2ff,#ecfeff);
+    }
+    .hero-box {
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(255,255,255,.75);
+      border-radius: 30px;
+      box-shadow: 0 18px 45px rgba(31,42,68,.12);
+      padding: 34px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="hero-box">
+      <div class="text-center mb-5">
+        <h1 class="fw-bold mb-2">Mesleğimi Seç</h1>
+        <p class="text-secondary mb-0">Kendine en uygun eğitim ve kariyer yolunu seçerek ilerle.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card-choice" onclick="window.location.href='meslek_universite/index.html'">
+            <div class="icon">🎓</div>
+            <h3 class="fw-bold">Üniversite Yolu</h3>
+            <p class="text-secondary mb-0">Üniversite okuyarak meslek sahibi olmak isteyen öğrenciler için hazırlanmış test ve kariyer sistemi.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-choice" onclick="window.location.href='meslek_lise/index.html'">
+            <div class="icon">🛠️</div>
+            <h3 class="fw-bold">Lise Sonrası Meslek</h3>
+            <p class="text-secondary mb-0">Üniversite düşünmeyen ve lise sonrası doğrudan iş hayatına yönelmek isteyen öğrenciler için hazırlanmış sistem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

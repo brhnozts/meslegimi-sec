@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lise Sonrası Meslek Rehberi - MEB Entegrasyonlu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root { --bg1:#f7fbff; --bg2:#eef8f2; --text:#1f2a44; --muted:#667085; --primary:#4f46e5; --shadow:0 18px 45px rgba(31,42,68,.12); --radius:22px; }
+    body { font-family: Inter, Arial, sans-serif; color: var(--text); background: radial-gradient(circle at top left, #dbeafe 0%, transparent 32%), radial-gradient(circle at top right, #dcfce7 0%, transparent 28%), linear-gradient(135deg, var(--bg1), var(--bg2)); min-height:100vh; }
+    .navbar { background: rgba(255,255,255,.86); backdrop-filter: blur(10px); border-bottom:1px solid rgba(255,255,255,.6); }
+    .hero, .section-space { padding: 34px 0 70px; }
+    .glass-card, .job-card, .soft-card { background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.7); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .glass-card { padding: 28px; }
+    .display-title { font-size: clamp(2rem, 4vw, 3.7rem); font-weight: 800; line-height: 1.06; letter-spacing: -.03em; }
+    .section-title { font-size: clamp(1.45rem, 2vw, 2.2rem); font-weight: 800; margin-bottom: 8px; }
+    .muted { color: var(--muted); }
+    .pill, .tag { display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid #e5e7eb; border-radius:999px; padding:8px 14px; }
+    .question-panel { display:none; }
+    .question-panel.active { display:block; animation: fadeUp .24s ease; }
+    @keyframes fadeUp { from {opacity:0; transform:translateY(8px)} to {opacity:1; transform:translateY(0)} }
+    .choice-card { border:2px solid transparent; border-radius:18px; padding:16px; background:#fff; cursor:pointer; transition:.22s ease; height:100%; box-shadow:0 8px 20px rgba(15,23,42,.06); }
+    .choice-card:hover { transform: translateY(-2px); border-color:#c7d2fe; }
+    .choice-card.active { border-color:var(--primary); background:linear-gradient(180deg,#eef2ff,#fff); box-shadow:0 12px 30px rgba(79,70,229,.16); }
+    .choice-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; background:#eef2ff; margin-bottom:12px; }
+    .progress-wrap { background:#edf2f7; border-radius:999px; height:12px; overflow:hidden; }
+    .progress-bar-custom { height:100%; width:0; border-radius:999px; background:linear-gradient(90deg,#4f46e5,#22c55e); transition:width .25s ease; }
+    .score-badge { font-size:.9rem; border-radius:999px; padding:8px 12px; background:#ecfeff; color:#155e75; font-weight:700; }
+    .filter-bar { display:grid; grid-template-columns:1.2fr 1fr 1fr auto; gap:12px; }
+    .job-card { overflow:hidden; height:100%; }
+    .job-top { padding:20px; color:#fff; background:linear-gradient(135deg,#4f46e5,#06b6d4); }
+    .job-body { padding:18px; }
+    .list-clean { padding-left:1.1rem; color: var(--muted); }
+    .detail-tabs { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 20px; }
+    .detail-tab-btn { border:1px solid #dbe4f0; background:#fff; color:var(--text); padding:10px 14px; border-radius:999px; font-weight:600; cursor:pointer; }
+    .detail-tab-btn.active { background:linear-gradient(135deg,#eef2ff,#f8fafc); border-color:#6366f1; color:#3730a3; box-shadow:0 8px 20px rgba(99,102,241,.12); }
+    .detail-tab-panel { display:none; }
+    .detail-tab-panel.active { display:block; }
+    .soft-block { border:1px solid #edf2f7; background:#fbfdff; border-radius:18px; padding:16px; }
+    .soft-block h5, .soft-block h6 { width:100%; font-size:1.02rem; font-weight:700; margin-bottom:10px; padding:8px 12px; border-radius:10px; background:linear-gradient(135deg,#eef2ff,#f8fafc); border-left:4px solid #6366f1; color:#3730a3; display:inline-block; }
+    .info-grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px; }
+    .career-line { border:1px solid #edf2f7; border-radius:16px; padding:14px; background:#fbfdff; }
+    .hidden-anchor { position: relative; top:-95px; visibility:hidden; }
+    @media (max-width: 991px) { .filter-bar, .info-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container py-2"><a class="navbar-brand fw-bold" href="#anasayfa">Lise Sonrası Meslek Rehberi</a></div>
+  </nav>
+
+  <header class="hero" id="anasayfa">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <span class="pill mb-3">🏫 MEB alan/dal entegrasyonlu lise meslek sistemi</span>
+          <h1 class="display-title">Üniversite düşünmeyen öğrenciler için gerçekçi meslek yönlendirmesi.</h1>
+          <p class="muted mt-3">Bu sürümde meslekler yalnızca lise sonrası çalışma hedefiyle listelenir ve her meslek için resmî MEB alan/dal önerileri gösterilir.</p>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a href="#test-alani" class="btn btn-dark btn-lg rounded-pill px-4">Teste Başla</a>
+            <a href="#meslekler" class="btn btn-outline-dark btn-lg rounded-pill px-4">Mesleklere Git</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="glass-card">
+            <h4 class="fw-bold mb-3">Bu sayfada ne var?</h4>
+            <div class="d-flex gap-3 mb-3"><div class="pill">1</div><div><div class="fw-semibold">10 soruluk sade test</div><div class="muted">Teknik, hizmet, üretim ve ticaret/ofis eğilimini bulur.</div></div></div>
+            <div class="d-flex gap-3 mb-3"><div class="pill">2</div><div><div class="fw-semibold">100 lise düzeyi meslek</div><div class="muted">Üniversite gerektirmeyen, bilinen ve yalın meslekler.</div></div></div>
+            <div class="d-flex gap-3"><div class="pill">3</div><div><div class="fw-semibold">MEB alan/dal önerisi</div><div class="muted">Her meslek için ana yol ve alternatif yol gösterilir.</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-space" id="test-alani">
+      <div class="container">
+        <div class="glass-card">
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-4">
+            <div><h2 class="section-title">Lise Sonrası Meslek Testi</h2><p class="muted">Daha kısa eğitimle iş hayatına atılmak isteyen öğrenciler için hazırlandı.</p></div>
+            <div class="pill">İlerleme: <strong id="progressText">1 / 10</strong></div>
+          </div>
+          <div class="progress-wrap mb-4"><div class="progress-bar-custom" id="progressBar"></div></div>
+          <div id="questionsContainer"></div>
+          <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-2">
+            <button class="btn btn-outline-secondary rounded-pill px-4" id="prevBtn" type="button">Geri</button>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-dark rounded-pill px-4" id="restartBtn" type="button">Baştan Başla</button>
+              <button class="btn btn-dark rounded-pill px-4" id="nextBtn" type="button">İleri</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space pt-0" id="sonuc-alani">
+      <div class="container">
+        <div class="glass-card">
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <h2 class="section-title">Sonucun</h2>
+              <div class="soft-card p-3 mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-2"><strong>Ana grup</strong><span class="score-badge" id="mainTypeBadge">Bekleniyor</span></div>
+                <p class="muted mb-0" id="mainTypeText">Sorular tamamlanınca burada yorum oluşur.</p>
+              </div>
+              <div class="soft-card p-3">
+                <div class="fw-semibold mb-2">Puan dağılımı</div>
+                <div class="mb-2">Teknik: <strong id="scoreTeknik">0</strong></div>
+                <div class="mb-2">Hizmet: <strong id="scoreHizmet">0</strong></div>
+                <div class="mb-2">Üretim: <strong id="scoreUretim">0</strong></div>
+                <div>Ticaret/Ofis: <strong id="scoreTicaret">0</strong></div>
+              </div>
+            </div>
+            <div class="col-lg-8"><h2 class="section-title">Öne Çıkan Meslekler</h2><div class="row g-3" id="topResultCards"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="hidden-anchor" id="meslekler"></span>
+    <section class="section-space pt-0">
+      <div class="container">
+        <div class="glass-card">
+          <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-3">
+            <div><h2 class="section-title">Tüm Lise Düzeyi Meslekler</h2><p class="muted">Filtreleyebilir, arayabilir ve detaylarını inceleyebilirsin.</p></div>
+            <div class="pill"><span id="allCareersCount">0</span> meslek</div>
+          </div>
+          <div class="soft-card p-3 mb-4">
+            <div class="filter-bar">
+              <div><label class="form-label fw-semibold">Arama</label><input id="careerSearchInput" type="text" class="form-control" placeholder="Meslek adı, açıklama..." /></div>
+              <div><label class="form-label fw-semibold">Ana grup</label><select id="groupFilter" class="form-select"><option value="">Tümü</option></select></div>
+              <div><label class="form-label fw-semibold">Alt grup</label><select id="subGroupFilter" class="form-select"><option value="">Tümü</option></select></div>
+              <div class="d-flex align-items-end"><button id="clearFiltersBtn" type="button" class="btn btn-outline-dark w-100">Temizle</button></div>
+            </div>
+          </div>
+          <div class="row g-4" id="allCareerCards"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space pt-0"><div class="container"><div id="detailPages"></div></div></section>
+  </main>
+
+  <script>
+    const questions = [
+      { title: 'Daha çok nasıl işlerden hoşlanırsın?', options: [
+        { label: 'Alet, makine, tamir işleri', icon: '🛠️', scores: { teknik: 3 } },
+        { label: 'İnsanlara hizmet etmek', icon: '🤝', scores: { hizmet: 3 } },
+        { label: 'Bir şey üretmek veya hazırlamak', icon: '🏭', scores: { uretim: 3 } },
+        { label: 'Satış, düzen, ofis işleri', icon: '📦', scores: { ticaret: 3 } }
+      ]},
+      { title: 'Kendini hangi konuda daha güçlü hissedersin?', options: [
+        { label: 'Tamir ve çözüm bulma', icon: '⚙️', scores: { teknik: 3 } },
+        { label: 'İletişim ve yardım', icon: '💬', scores: { hizmet: 3 } },
+        { label: 'El becerisi ve dikkat', icon: '✂️', scores: { uretim: 3 } },
+        { label: 'Takip ve düzen', icon: '🗂️', scores: { ticaret: 3 } }
+      ]},
+      { title: 'Boş zamanında hangisi sana daha yakın?', options: [
+        { label: 'Elektronik / araç / bilgisayar kurcalamak', icon: '💻', scores: { teknik: 2 } },
+        { label: 'İnsanlarla ilgilenmek', icon: '🙂', scores: { hizmet: 2 } },
+        { label: 'Mutfak / atölye / üretim', icon: '🍞', scores: { uretim: 2 } },
+        { label: 'Satış / vitrin / düzenleme', icon: '🛍️', scores: { ticaret: 2 } }
+      ]},
+      { title: 'Hangi ortamda daha rahat çalışırsın?', options: [
+        { label: 'Atölye veya teknik alan', icon: '🔧', scores: { teknik: 3 } },
+        { label: 'Müşteri veya insanlarla birlikte', icon: '🧑‍🤝‍🧑', scores: { hizmet: 3 } },
+        { label: 'Üretim alanı veya mutfak', icon: '🏭', scores: { uretim: 3 } },
+        { label: 'Mağaza, ofis, depo', icon: '🏬', scores: { ticaret: 3 } }
+      ]},
+      { title: 'Hangisi sana daha cazip geliyor?', options: [
+        { label: 'Teknik sorun çözmek', icon: '🧠', scores: { teknik: 2 } },
+        { label: 'Müşteri memnun etmek', icon: '🌟', scores: { hizmet: 2 } },
+        { label: 'Somut ürün ortaya çıkarmak', icon: '📦', scores: { uretim: 2 } },
+        { label: 'Satış veya kayıt işleri yapmak', icon: '💳', scores: { ticaret: 2 } }
+      ]},
+      { title: 'Ekip içinde hangi rol sana daha yakın?', options: [
+        { label: 'Usta/teknik destek', icon: '👨‍🔧', scores: { teknik: 2 } },
+        { label: 'Servis ve destek', icon: '🙋', scores: { hizmet: 2 } },
+        { label: 'Üretim yapan kişi', icon: '🧵', scores: { uretim: 2 } },
+        { label: 'Düzenleyen/takip eden kişi', icon: '📋', scores: { ticaret: 2 } }
+      ]},
+      { title: 'Hangi derslere daha yakın hissedersin?', options: [
+        { label: 'Meslek dersleri / teknik çizim', icon: '📐', scores: { teknik: 2 } },
+        { label: 'Türkçe / iletişim / sosyal', icon: '📚', scores: { hizmet: 2 } },
+        { label: 'Uygulama ve atölye dersleri', icon: '🪚', scores: { uretim: 2 } },
+        { label: 'Matematik / muhasebe / ofis', icon: '🧮', scores: { ticaret: 2 } }
+      ]},
+      { title: 'Nasıl bir iş hayatı istersin?', options: [
+        { label: 'Teknik beceriye dayalı', icon: '⚡', scores: { teknik: 3 } },
+        { label: 'İnsanlarla iletişimli', icon: '🫶', scores: { hizmet: 3 } },
+        { label: 'Üretim ve emek odaklı', icon: '🏗️', scores: { uretim: 3 } },
+        { label: 'Ticaret ve düzen odaklı', icon: '📊', scores: { ticaret: 3 } }
+      ]},
+      { title: 'Hangisi seni daha çok motive eder?', options: [
+        { label: 'Bir cihazı çalışır hale getirmek', icon: '🔌', scores: { teknik: 2 } },
+        { label: 'Bir kişiyi memnun etmek', icon: '😊', scores: { hizmet: 2 } },
+        { label: 'Kendi emeğinle bir şey üretmek', icon: '🧁', scores: { uretim: 2 } },
+        { label: 'Satış ve düzen başarısı görmek', icon: '📈', scores: { ticaret: 2 } }
+      ]},
+      { title: 'Şu an hangi yol sana daha yakın geliyor?', options: [
+        { label: 'Teknik bir meslek', icon: '🛠️', scores: { teknik: 3 } },
+        { label: 'Hizmet alanı', icon: '🤝', scores: { hizmet: 3 } },
+        { label: 'Üretim/atölye alanı', icon: '🏭', scores: { uretim: 3 } },
+        { label: 'Satış/ofis/depo alanı', icon: '📦', scores: { ticaret: 3 } }
+      ]}
+    ];
+
+    let careersData = [];
+    let filteredCareersData = [];
+    let mebData = [];
+    let currentQuestion = 0;
+    const answers = new Array(questions.length).fill(null);
+
+    const questionsContainer = document.getElementById('questionsContainer');
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+    const topResultCards = document.getElementById('topResultCards');
+    const allCareerCards = document.getElementById('allCareerCards');
+    const detailPages = document.getElementById('detailPages');
+
+    function splitList(value) { if (!value) return []; return String(value).split(/\||;|,|•|\n/).map(v => v.trim()).filter(Boolean); }
+    function slugify(text) { return String(text || '').toLowerCase().replace(/ç/g,'c').replace(/ğ/g,'g').replace(/ı/g,'i').replace(/ö/g,'o').replace(/ş/g,'s').replace(/ü/g,'u').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+    function normalizeCareerRow(row, index) {
+      return {
+        idNum: row["id"] || row["ID"] || (index + 1),
+        id: `career-${index}-${slugify(row["Meslek"])}`,
+        title: row["Meslek"] || "Meslek",
+        group: row["Ana Grup"] || "Belirtilmedi",
+        subGroup: row["Alt Grup"] || "Belirtilmedi",
+        who: row["Tanım"] || "",
+        short: row["Kısa Açıklama"] || "",
+        skills: splitList(row["Gerekli Özellikler"]),
+        workAreas: splitList(row["Çalışma Alanları"]),
+        icon: row["Grup İkonu"] || "✨"
+      };
+    }
+    function renderQuestions() {
+      questionsContainer.innerHTML = questions.map((q, qIndex) => `
+        <div class="question-panel ${qIndex === currentQuestion ? 'active' : ''}">
+          <div class="mb-4"><div class="pill mb-3">Adım ${qIndex + 1}</div><h3 class="fw-bold mb-2">${q.title}</h3></div>
+          <div class="row g-3">
+            ${q.options.map((opt, optIndex) => `<div class="col-md-6"><div class="choice-card ${answers[qIndex] === optIndex ? 'active' : ''}" data-q="${qIndex}" data-o="${optIndex}"><div class="choice-icon">${opt.icon}</div><div class="fw-semibold mb-1">${opt.label}</div><div class="muted">Bu cevap sana yakınsa seçebilirsin.</div></div></div>`).join('')}
+          </div>
+        </div>`).join('');
+      document.querySelectorAll('.choice-card').forEach(card => card.addEventListener('click', () => selectAnswer(Number(card.dataset.q), Number(card.dataset.o))));
+      updateProgress(); updateButtons();
+    }
+    function selectAnswer(q,o){ answers[q]=o; renderQuestions(); calculateResults(); }
+    function updateProgress(){ progressText.textContent=`${currentQuestion+1} / ${questions.length}`; progressBar.style.width=`${((currentQuestion+1)/questions.length)*100}%`; }
+    function updateButtons(){ document.getElementById('prevBtn').disabled=currentQuestion===0; document.getElementById('nextBtn').textContent=currentQuestion===questions.length-1?'Sonucu Gör':'İleri'; }
+    function nextQuestion(){ if(answers[currentQuestion]===null){ alert('Lütfen bu adım için bir seçenek seç.'); return; } if(currentQuestion<questions.length-1){ currentQuestion++; renderQuestions(); } else { calculateResults(); document.getElementById('sonuc-alani').scrollIntoView({behavior:'smooth'}); } }
+    function prevQuestion(){ if(currentQuestion>0){ currentQuestion--; renderQuestions(); } }
+    function resetQuiz(){ currentQuestion=0; for(let i=0;i<answers.length;i++) answers[i]=null; renderQuestions(); calculateResults(); window.scrollTo({top:0,behavior:'smooth'}); }
+    function calculateProfile() { const scores = { teknik:0, hizmet:0, uretim:0, ticaret:0 }; answers.forEach((answerIndex, qIndex) => { if (answerIndex === null) return; const selected = questions[qIndex].options[answerIndex]; Object.entries(selected.scores || {}).forEach(([k,v]) => scores[k]+=v); }); return scores; }
+    function getMainType(scores) { const sorted = Object.entries(scores).sort((a,b)=>b[1]-a[1]); if (!sorted.length || sorted[0][1]===0) return ['Bekleniyor','Sorular tamamlanınca burada yorum oluşur.']; const map = { teknik:['Teknik Meslekler','El becerisi, teknik ilgi ve tamir/kurulum işleri sana daha yakın görünüyor.'], hizmet:['Hizmet Meslekleri','İnsanlarla iletişim kurmak ve hizmet vermek sana daha uygun görünüyor.'], uretim:['Üretim Meslekleri','Bir şey üretmek, hazırlamak ve uygulamalı çalışmak sana daha yakın görünüyor.'], ticaret:['Ticaret ve Ofis Meslekleri','Satış, ofis, düzen ve takip işleri sana daha uygun görünüyor.'] }; return map[sorted[0][0]]; }
+    function scoreCareer(career, scores) { let total=0; if(career.group==='Teknik Meslekler') total += scores.teknik*5; if(career.group==='Hizmet Meslekleri') total += scores.hizmet*5; if(career.group==='Üretim Meslekleri') total += scores.uretim*5; if(career.group==='Ticaret ve Ofis Meslekleri') total += scores.ticaret*5; return total; }
+    function calculateRankedCareers(scores){ return careersData.map(c => ({...c,totalScore:scoreCareer(c,scores)})).sort((a,b)=>b.totalScore-a.totalScore); }
+    function renderTopResults(ranked) { topResultCards.innerHTML = ranked.slice(0,6).map(item => `<div class="col-md-6"><div class="soft-card p-3 h-100"><div class="d-flex justify-content-between align-items-center mb-2"><div class="fw-bold">${item.icon} ${item.title}</div><span class="score-badge">Uyum: ${item.totalScore}</span></div><div class="text-primary fw-semibold mb-2">${item.group} • ${item.subGroup}</div><div class="muted mb-3">${item.short}</div><button class="btn btn-sm btn-outline-dark rounded-pill" type="button" onclick="scrollToCareerDetail('${item.id}')">Detaylı profil</button></div></div>`).join(''); }
+    function renderAllCareerCards(data) { const useData = data || (filteredCareersData.length ? filteredCareersData : careersData); document.getElementById('allCareersCount').textContent = useData.length; allCareerCards.innerHTML = useData.map(career => `<div class="col-md-6 col-xl-4"><div class="job-card"><div class="job-top"><div class="small mb-2 opacity-75">${career.group}</div><h4 class="fw-bold mb-2">${career.icon} ${career.title}</h4><div class="small opacity-75">${career.subGroup}</div></div><div class="job-body d-flex flex-column"><p class="muted mb-3">${career.short}</p><div class="mb-3"><span class="tag">${career.group}</span> <span class="tag">${career.subGroup}</span></div><div class="mb-3">${(career.skills || []).slice(0,4).map(item => `<span class="tag">${item}</span>`).join('')}</div><div class="mt-auto d-flex gap-2 flex-wrap"><button class="btn btn-dark rounded-pill btn-sm" type="button" onclick="scrollToCareerDetail('${career.id}')">Detaylı profil</button></div></div></div></div>`).join(''); }
+    async function loadMebData(){ try { const response = await fetch('./meslek_lise_meb.json', { cache:'no-store' }); if(!response.ok) throw new Error(); mebData = await response.json(); } catch(e) { mebData = []; } }
+    function findMebRecord(career){ return mebData.find(item => String(item.meslek_id) === String(career.idNum) || String(item.meslek).toLocaleLowerCase('tr') === String(career.title).toLocaleLowerCase('tr')) || null; }
+    function renderMebPaths(career){ const record = findMebRecord(career); const yollar = record?.meb_yollari || []; if(!yollar.length) return '<div class="muted">Bu meslek için MEB alan/dal eşleştirmesi bulunamadı.</div>'; return `<div class="d-grid gap-2">${yollar.map(item => `<div class="career-line"><div class="d-flex justify-content-between align-items-center gap-2 flex-wrap mb-2"><div class="fw-semibold">${item.alan}</div><span class="tag">${item.oncelik}</span></div><div class="mb-2"><span class="tag">🏫 ${item.okul_turu || 'Mesleki ve Teknik Anadolu Lisesi'}</span></div><div class="text-primary fw-semibold mb-1">${item.dal}</div><div class="muted">${item.neden}</div></div>`).join('')}</div>`; }
+    function renderDetailPages(data){ const useData = data || (filteredCareersData.length ? filteredCareersData : careersData); detailPages.innerHTML = useData.map(career => `<div class="job-card mb-4" id="${career.id}"><div class="job-top"><div class="row g-3 align-items-end"><div class="col-lg-8"><div class="pill bg-white text-dark mb-3">${career.group} • ${career.subGroup}</div><h2 class="fw-bold mb-2">${career.icon} ${career.title}</h2><p class="mb-0 opacity-75">${career.short}</p></div><div class="col-lg-4 text-lg-end"><a href="#meslekler" class="btn btn-light rounded-pill">Diğer Meslekler</a></div></div></div><div class="job-body"><div class="detail-tabs"><button class="detail-tab-btn active" type="button" data-tab="genel-${career.id}">Genel Bilgi</button><button class="detail-tab-btn" type="button" data-tab="lise-${career.id}">MEB Alan/Dal</button><button class="detail-tab-btn" type="button" data-tab="kariyer-${career.id}">Kariyer</button></div><div class="detail-tab-panel active" data-panel="genel-${career.id}"><div class="info-grid"><div class="soft-block"><h5>📘 Tanım</h5><p class="muted mb-0">${career.who}</p></div><div class="soft-block"><h5>💼 Nerelerde Çalışabilir?</h5><ul class="list-clean mb-0">${career.workAreas.map(item => `<li class="mb-2">${item}</li>`).join('')}</ul></div><div class="soft-block"><h6>🧠 Gerekli Özellikler</h6><div>${career.skills.map(item => `<span class="tag">${item}</span>`).join('')}</div></div><div class="soft-block"><h6>🚀 Hızlı Başlangıç</h6><ul class="list-clean mb-0"><li class="mb-2">İlgili lise alanında uygulama derslerine önem ver.</li><li class="mb-2">Staj, atölye veya işbaşı deneyimi kazanmaya çalış.</li><li class="mb-2">Küçük iş deneyimleriyle mesleği erkenden tanı.</li></ul></div></div></div><div class="detail-tab-panel" data-panel="lise-${career.id}"><div class="soft-block"><h5>🏫 MEB Alan / Dal ve Okul Türü Önerisi</h5><div class="muted mb-3">Bu meslek için hangi okul türünde, hangi MEB alan ve dalında okunabileceği aşağıda gösterilir.</div>${renderMebPaths(career)}</div></div><div class="detail-tab-panel" data-panel="kariyer-${career.id}"><div class="soft-block"><h5>🗺️ Kariyer Yol Haritası</h5><div class="career-line mb-2"><strong>1. Lise:</strong> Önerilen MEB alan/dal yolunu seç ve uygulama derslerine odaklan.</div><div class="career-line mb-2"><strong>2. Deneyim:</strong> Staj, çıraklık veya uygulamalı iş deneyimi kazan.</div><div class="career-line mb-2"><strong>3. Başlangıç:</strong> Yardımcı eleman veya giriş seviyesi çalışan olarak işe başla.</div><div class="career-line"><strong>4. Gelişim:</strong> Ustalık, uzmanlaşma veya kendi işini kurma yoluna ilerle.</div></div></div></div></div>`).join(''); wireDetailTabs(); }
+    function applyCareerFilters(){ const search = (document.getElementById('careerSearchInput').value || '').toLocaleLowerCase('tr'); const group = document.getElementById('groupFilter').value; const subGroup = document.getElementById('subGroupFilter').value; filteredCareersData = careersData.filter(career => { const haystack = [career.title, career.group, career.subGroup, career.short, career.who, ...(career.skills||[]), ...(career.workAreas||[])].join(' ').toLocaleLowerCase('tr'); return (!search || haystack.includes(search)) && (!group || career.group === group) && (!subGroup || career.subGroup === subGroup); }); renderAllCareerCards(filteredCareersData); renderDetailPages(filteredCareersData); }
+    function clearCareerFilters(){ document.getElementById('careerSearchInput').value=''; document.getElementById('groupFilter').value=''; document.getElementById('subGroupFilter').value=''; filteredCareersData=[]; renderAllCareerCards(careersData); renderDetailPages(careersData); }
+    function populateFilterOptions(){ const groupSelect=document.getElementById('groupFilter'); const subGroupSelect=document.getElementById('subGroupFilter'); const groups=[...new Set(careersData.map(c=>c.group).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'tr')); const subGroups=[...new Set(careersData.map(c=>c.subGroup).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'tr')); groupSelect.innerHTML='<option value="">Tümü</option>'+groups.map(g=>`<option value="${g}">${g}</option>`).join(''); subGroupSelect.innerHTML='<option value="">Tümü</option>'+subGroups.map(g=>`<option value="${g}">${g}</option>`).join(''); }
+    function scrollToCareerDetail(careerId){ const el=document.getElementById(careerId); if(!el) return; el.scrollIntoView({behavior:'smooth',block:'start'}); setTimeout(()=>{ const oldShadow=el.style.boxShadow; el.style.boxShadow='0 0 0 3px rgba(99,102,241,.25), 0 18px 45px rgba(31,42,68,.12)'; setTimeout(()=>el.style.boxShadow=oldShadow,1500); },250); }
+    function wireDetailTabs(){ document.querySelectorAll('.detail-tabs').forEach(tabWrap => { const buttons=tabWrap.querySelectorAll('.detail-tab-btn'); buttons.forEach(btn => { btn.addEventListener('click', () => { const target=btn.getAttribute('data-tab'); const cardBody=tabWrap.parentElement; buttons.forEach(b => b.classList.remove('active')); btn.classList.add('active'); cardBody.querySelectorAll('.detail-tab-panel').forEach(panel => panel.classList.toggle('active', panel.getAttribute('data-panel') === target)); }); }); }); }
+    function calculateResults(){ if(!careersData.length) return; const scores=calculateProfile(); const ranked=calculateRankedCareers(scores); const [label,text]=getMainType(scores); document.getElementById('mainTypeBadge').textContent=label; document.getElementById('mainTypeText').textContent=text; document.getElementById('scoreTeknik').textContent=scores.teknik; document.getElementById('scoreHizmet').textContent=scores.hizmet; document.getElementById('scoreUretim').textContent=scores.uretim; document.getElementById('scoreTicaret').textContent=scores.ticaret; renderTopResults(ranked); }
+    async function loadCareers(){ await loadMebData(); const rows = await fetch('./meslekler_lise.json', { cache:'no-store' }).then(r=>r.json()); careersData = rows.map((row,index)=>normalizeCareerRow(row,index)); filteredCareersData=[]; populateFilterOptions(); renderAllCareerCards(careersData); renderDetailPages(careersData); calculateResults(); }
+    document.getElementById('nextBtn').addEventListener('click', nextQuestion);
+    document.getElementById('prevBtn').addEventListener('click', prevQuestion);
+    document.getElementById('restartBtn').addEventListener('click', resetQuiz);
+    document.getElementById('careerSearchInput').addEventListener('input', applyCareerFilters);
+    document.getElementById('groupFilter').addEventListener('change', applyCareerFilters);
+    document.getElementById('subGroupFilter').addEventListener('change', applyCareerFilters);
+    document.getElementById('clearFiltersBtn').addEventListener('click', clearCareerFilters);
+    renderQuestions(); loadCareers();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

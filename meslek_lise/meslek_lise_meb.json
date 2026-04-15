@@ -1,0 +1,2902 @@
+[
+  {
+    "meslek_id": 1,
+    "meslek": "Elektrik Teknisyeni",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Elektrik Elektronik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektrik Tesisatları ve Dağıtımı",
+        "neden": "Elektrik tesisatı, kablolama ve saha uygulamaları için en doğrudan yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektronik Sistemler",
+        "neden": "Elektronik kurulum, cihaz bağlantısı ve sistem temelli işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Endüstriyel Otomasyon Teknolojileri",
+        "dal": "Endüstriyel Kontrol",
+        "neden": "Otomasyon ve kontrol sistemlerine yakın teknik işler için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 2,
+    "meslek": "Elektrik Tesisat Ustası",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Elektrik Elektronik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektrik Tesisatları ve Dağıtımı",
+        "neden": "Elektrik tesisatı, kablolama ve saha uygulamaları için en doğrudan yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektronik Sistemler",
+        "neden": "Elektronik kurulum, cihaz bağlantısı ve sistem temelli işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Endüstriyel Otomasyon Teknolojileri",
+        "dal": "Endüstriyel Kontrol",
+        "neden": "Otomasyon ve kontrol sistemlerine yakın teknik işler için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 3,
+    "meslek": "Elektronik Teknisyeni",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Elektrik Elektronik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektrik Tesisatları ve Dağıtımı",
+        "neden": "Elektrik tesisatı, kablolama ve saha uygulamaları için en doğrudan yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektronik Sistemler",
+        "neden": "Elektronik kurulum, cihaz bağlantısı ve sistem temelli işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Endüstriyel Otomasyon Teknolojileri",
+        "dal": "Endüstriyel Kontrol",
+        "neden": "Otomasyon ve kontrol sistemlerine yakın teknik işler için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 4,
+    "meslek": "Güvenlik Sistemleri Montaj Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Elektrik Elektronik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektrik Tesisatları ve Dağıtımı",
+        "neden": "Elektrik tesisatı, kablolama ve saha uygulamaları için en doğrudan yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektronik Sistemler",
+        "neden": "Elektronik kurulum, cihaz bağlantısı ve sistem temelli işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Endüstriyel Otomasyon Teknolojileri",
+        "dal": "Endüstriyel Kontrol",
+        "neden": "Otomasyon ve kontrol sistemlerine yakın teknik işler için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 5,
+    "meslek": "Pano Montaj Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Elektrik Elektronik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektrik Tesisatları ve Dağıtımı",
+        "neden": "Elektrik tesisatı, kablolama ve saha uygulamaları için en doğrudan yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektronik Sistemler",
+        "neden": "Elektronik kurulum, cihaz bağlantısı ve sistem temelli işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Endüstriyel Otomasyon Teknolojileri",
+        "dal": "Endüstriyel Kontrol",
+        "neden": "Otomasyon ve kontrol sistemlerine yakın teknik işler için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 6,
+    "meslek": "Oto Tamircisi",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Motorlu Araçlar",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Elektromekanik",
+        "neden": "Araç bakım, arıza tespiti ve servis işleri için en uygun meslek lisesi yoludur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Gövde",
+        "neden": "Kaporta, gövde ve araç dış yapı uygulamaları için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Boya",
+        "neden": "Araç boya ve yüzey hazırlık işleri için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 7,
+    "meslek": "Oto Elektrikçisi",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Motorlu Araçlar",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Elektromekanik",
+        "neden": "Araç bakım, arıza tespiti ve servis işleri için en uygun meslek lisesi yoludur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Gövde",
+        "neden": "Kaporta, gövde ve araç dış yapı uygulamaları için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Boya",
+        "neden": "Araç boya ve yüzey hazırlık işleri için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 8,
+    "meslek": "Kaporta Ustası",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Motorlu Araçlar",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Elektromekanik",
+        "neden": "Araç bakım, arıza tespiti ve servis işleri için en uygun meslek lisesi yoludur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Gövde",
+        "neden": "Kaporta, gövde ve araç dış yapı uygulamaları için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Boya",
+        "neden": "Araç boya ve yüzey hazırlık işleri için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 9,
+    "meslek": "Araç Boya Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Motorlu Araçlar",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Elektromekanik",
+        "neden": "Araç bakım, arıza tespiti ve servis işleri için en uygun meslek lisesi yoludur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Gövde",
+        "neden": "Kaporta, gövde ve araç dış yapı uygulamaları için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Boya",
+        "neden": "Araç boya ve yüzey hazırlık işleri için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 10,
+    "meslek": "Lastik Servis Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Motorlu Araçlar",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Elektromekanik",
+        "neden": "Araç bakım, arıza tespiti ve servis işleri için en uygun meslek lisesi yoludur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Gövde",
+        "neden": "Kaporta, gövde ve araç dış yapı uygulamaları için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Motorlu Araçlar Teknolojisi",
+        "dal": "Otomotiv Boya",
+        "neden": "Araç boya ve yüzey hazırlık işleri için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 11,
+    "meslek": "CNC Operatörü",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Makine Metal",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Makine ve Tasarım Teknolojisi",
+        "dal": "Bilgisayarlı Makine İmalatı",
+        "neden": "CNC, torna ve üretim tezgâhlarıyla ilgili işler için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Makine ve Tasarım Teknolojisi",
+        "dal": "Makine Bakım Onarım",
+        "neden": "Makine ayarı, bakım ve üretim hattı desteği için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Metal Teknolojisi",
+        "dal": "Çelik Konstrüksiyon",
+        "neden": "Metal imalat ve saha uygulamaları için iyi bir alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 12,
+    "meslek": "Kaynakçı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Makine Metal",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Metal Teknolojisi",
+        "dal": "Kaynakçılık",
+        "neden": "Kaynak, birleştirme ve metal işleme uygulamaları için doğrudan uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Metal Teknolojisi",
+        "dal": "Çelik Konstrüksiyon",
+        "neden": "Metal yapı ve montaj süreçlerinde çalışmak için güçlü bir alternatiftir."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Makine ve Tasarım Teknolojisi",
+        "dal": "Makine Bakım Onarım",
+        "neden": "Atölye ve fabrika ortamındaki teknik görevler için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 13,
+    "meslek": "Torna Tesviye Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Makine Metal",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Makine ve Tasarım Teknolojisi",
+        "dal": "Bilgisayarlı Makine İmalatı",
+        "neden": "CNC, torna ve üretim tezgâhlarıyla ilgili işler için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Makine ve Tasarım Teknolojisi",
+        "dal": "Makine Bakım Onarım",
+        "neden": "Makine ayarı, bakım ve üretim hattı desteği için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Metal Teknolojisi",
+        "dal": "Çelik Konstrüksiyon",
+        "neden": "Metal imalat ve saha uygulamaları için iyi bir alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 14,
+    "meslek": "Makine Bakım Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Makine Metal",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Makine ve Tasarım Teknolojisi",
+        "dal": "Makine Bakım Onarım",
+        "neden": "Makine ve bakım odaklı üretim işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Metal Teknolojisi",
+        "dal": "Kaynakçılık",
+        "neden": "Metal işleme ve atölye temelli görevler için alternatif oluşturur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Makine ve Tasarım Teknolojisi",
+        "dal": "Bilgisayarlı Makine İmalatı",
+        "neden": "Üretim tezgâhları ve imalat teknolojileri için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 15,
+    "meslek": "Metal İşleme Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Makine Metal",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Metal Teknolojisi",
+        "dal": "Kaynakçılık",
+        "neden": "Kaynak, birleştirme ve metal işleme uygulamaları için doğrudan uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Metal Teknolojisi",
+        "dal": "Çelik Konstrüksiyon",
+        "neden": "Metal yapı ve montaj süreçlerinde çalışmak için güçlü bir alternatiftir."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Makine ve Tasarım Teknolojisi",
+        "dal": "Makine Bakım Onarım",
+        "neden": "Atölye ve fabrika ortamındaki teknik görevler için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 16,
+    "meslek": "Bilgisayar Teknik Servis Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Bilişim Teknik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Bilgisayar Teknik Servisi",
+        "neden": "Bilgisayar, yazıcı ve cihaz kurulumu/onarımı için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Yazılım Geliştirme",
+        "neden": "Yazılım ve web destekli teknik işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektronik Sistemler",
+        "neden": "Telefon, cihaz ve elektronik bileşen temelli işler için destek sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 17,
+    "meslek": "Ağ Kurulum Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Bilişim Teknik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Ağ İşletmenliği ve Siber Güvenlik",
+        "neden": "Ağ kurulumu, kamera sistemleri ve siber güvenlik temelli işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Bilgisayar Teknik Servisi",
+        "neden": "Kurulum, bakım ve donanım desteği için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektronik Sistemler",
+        "neden": "Kamera, alarm ve düşük akım sistemleri için iyi bir destektir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 18,
+    "meslek": "Yazıcı Teknik Servis Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Bilişim Teknik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Bilgisayar Teknik Servisi",
+        "neden": "Bilgisayar, yazıcı ve cihaz kurulumu/onarımı için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Yazılım Geliştirme",
+        "neden": "Yazılım ve web destekli teknik işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektronik Sistemler",
+        "neden": "Telefon, cihaz ve elektronik bileşen temelli işler için destek sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 19,
+    "meslek": "Güvenlik Kamerası Kurulum Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Bilişim Teknik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Ağ İşletmenliği ve Siber Güvenlik",
+        "neden": "Ağ kurulumu, kamera sistemleri ve siber güvenlik temelli işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Bilgisayar Teknik Servisi",
+        "neden": "Kurulum, bakım ve donanım desteği için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektronik Sistemler",
+        "neden": "Kamera, alarm ve düşük akım sistemleri için iyi bir destektir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 20,
+    "meslek": "Telefon Tamir Teknisyeni",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Bilişim Teknik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Bilgisayar Teknik Servisi",
+        "neden": "Bilgisayar, yazıcı ve cihaz kurulumu/onarımı için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Yazılım Geliştirme",
+        "neden": "Yazılım ve web destekli teknik işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektronik Sistemler",
+        "neden": "Telefon, cihaz ve elektronik bileşen temelli işler için destek sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 21,
+    "meslek": "Sıhhi Tesisatçı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Yapı Teknik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tesisat Teknolojisi ve İklimlendirme",
+        "dal": "Tesisat ve Enerji Sistemleri",
+        "neden": "Sıhhi tesisat, doğalgaz ve bina teknik uygulamaları için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tesisat Teknolojisi ve İklimlendirme",
+        "dal": "Soğutma ve İklimlendirme Sistemleri",
+        "neden": "Bakım ve cihaz temelli teknik işler için alternatif sunar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "İnşaat Teknolojisi",
+        "dal": "Yapı Yüzey Kaplama",
+        "neden": "Şantiye ve saha uygulamalarını tanımak için yardımcı olabilir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 22,
+    "meslek": "Doğalgaz Tesisat Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Yapı Teknik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tesisat Teknolojisi ve İklimlendirme",
+        "dal": "Tesisat ve Enerji Sistemleri",
+        "neden": "Sıhhi tesisat, doğalgaz ve bina teknik uygulamaları için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tesisat Teknolojisi ve İklimlendirme",
+        "dal": "Soğutma ve İklimlendirme Sistemleri",
+        "neden": "Bakım ve cihaz temelli teknik işler için alternatif sunar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "İnşaat Teknolojisi",
+        "dal": "Yapı Yüzey Kaplama",
+        "neden": "Şantiye ve saha uygulamalarını tanımak için yardımcı olabilir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 23,
+    "meslek": "Klima Bakım Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Yapı Teknik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tesisat Teknolojisi ve İklimlendirme",
+        "dal": "Soğutma ve İklimlendirme Sistemleri",
+        "neden": "Klima, soğutma ve bakım odaklı işler için doğrudan uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tesisat Teknolojisi ve İklimlendirme",
+        "dal": "Tesisat ve Enerji Sistemleri",
+        "neden": "Bina tesisatı ve teknik bakım süreçleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Elektrik-Elektronik Teknolojisi",
+        "dal": "Elektrik Tesisatları ve Dağıtımı",
+        "neden": "Cihaz bağlantıları ve elektrik altyapısı için faydalı temel sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 24,
+    "meslek": "Asansör Bakım Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Yapı Teknik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tesisat Teknolojisi ve İklimlendirme",
+        "dal": "Tesisat ve Enerji Sistemleri",
+        "neden": "Sıhhi tesisat, doğalgaz ve bina teknik uygulamaları için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tesisat Teknolojisi ve İklimlendirme",
+        "dal": "Soğutma ve İklimlendirme Sistemleri",
+        "neden": "Bakım ve cihaz temelli teknik işler için alternatif sunar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "İnşaat Teknolojisi",
+        "dal": "Yapı Yüzey Kaplama",
+        "neden": "Şantiye ve saha uygulamalarını tanımak için yardımcı olabilir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 25,
+    "meslek": "İnşaat Uygulama Elemanı",
+    "ana_grup": "Teknik Meslekler",
+    "alt_grup": "Yapı Teknik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tesisat Teknolojisi ve İklimlendirme",
+        "dal": "Tesisat ve Enerji Sistemleri",
+        "neden": "Sıhhi tesisat, doğalgaz ve bina teknik uygulamaları için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tesisat Teknolojisi ve İklimlendirme",
+        "dal": "Soğutma ve İklimlendirme Sistemleri",
+        "neden": "Bakım ve cihaz temelli teknik işler için alternatif sunar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "İnşaat Teknolojisi",
+        "dal": "Yapı Yüzey Kaplama",
+        "neden": "Şantiye ve saha uygulamalarını tanımak için yardımcı olabilir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 26,
+    "meslek": "Aşçı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Yiyecek İçecek",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gastronomi ve Mutfak Sanatları",
+        "dal": "Mutfak Sanatları",
+        "neden": "Aşçılık ve mutfak üretimi için en uygun resmî yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gastronomi ve Mutfak Sanatları",
+        "dal": "Pastacılık ve Ekmekçilik",
+        "neden": "Tatlı, hamur işi ve pastane yönüne açılmak için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Yiyecek İçecek Hizmetleri",
+        "dal": "Yiyecek İçecek Hizmetleri",
+        "neden": "Restoran ve yiyecek hizmetlerinin genel yapısını öğrenmek için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 27,
+    "meslek": "Pastacı Yardımcısı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Yiyecek İçecek",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gastronomi ve Mutfak Sanatları",
+        "dal": "Pastacılık ve Ekmekçilik",
+        "neden": "Pastane, unlu mamul ve fırın üretimi için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Yiyecek İçecek Hizmetleri",
+        "dal": "Yiyecek İçecek Hizmetleri",
+        "neden": "Mutfak ve yiyecek hazırlama süreçlerini genel düzeyde öğrenmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda İşleme",
+        "neden": "Üretim ve hijyen odaklı mutfak/gıda işleri için teknik temel sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 28,
+    "meslek": "Fırın Üretim Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Yiyecek İçecek",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gastronomi ve Mutfak Sanatları",
+        "dal": "Pastacılık ve Ekmekçilik",
+        "neden": "Pastane, unlu mamul ve fırın üretimi için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Yiyecek İçecek Hizmetleri",
+        "dal": "Yiyecek İçecek Hizmetleri",
+        "neden": "Mutfak ve yiyecek hazırlama süreçlerini genel düzeyde öğrenmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda İşleme",
+        "neden": "Üretim ve hijyen odaklı mutfak/gıda işleri için teknik temel sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 29,
+    "meslek": "Garson",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Yiyecek İçecek",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gastronomi ve Mutfak Sanatları",
+        "dal": "Servis ve Kahve Hazırlama",
+        "neden": "Servis, kahve hazırlama ve müşteri teması yoğun işler için en uygun daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Yiyecek İçecek Hizmetleri",
+        "dal": "Yiyecek İçecek Hizmetleri",
+        "neden": "Restoran ve servis süreçlerinin genelini öğrenmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Operasyon",
+        "neden": "Otel ve hizmet organizasyonu odaklı görevler için destek sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 30,
+    "meslek": "Barista",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Yiyecek İçecek",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gastronomi ve Mutfak Sanatları",
+        "dal": "Servis ve Kahve Hazırlama",
+        "neden": "Servis, kahve hazırlama ve müşteri teması yoğun işler için en uygun daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Yiyecek İçecek Hizmetleri",
+        "dal": "Yiyecek İçecek Hizmetleri",
+        "neden": "Restoran ve servis süreçlerinin genelini öğrenmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Operasyon",
+        "neden": "Otel ve hizmet organizasyonu odaklı görevler için destek sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 31,
+    "meslek": "Kuaför",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Kişisel Bakım",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Saç Bakımı ve Yapımı",
+        "neden": "Saç kesimi, şekillendirme ve kuaförlük temelli işler için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Cilt Bakımı ve Makyaj",
+        "neden": "Salon hizmetlerini genişletmek ve bakım alanında çalışmak için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Kozmetik Ürünleri Uygulama",
+        "neden": "Kozmetik ve uygulamalı bakım hizmetleri için destek sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 32,
+    "meslek": "Berber",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Kişisel Bakım",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Saç Bakımı ve Yapımı",
+        "neden": "Saç kesimi, şekillendirme ve kuaförlük temelli işler için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Cilt Bakımı ve Makyaj",
+        "neden": "Salon hizmetlerini genişletmek ve bakım alanında çalışmak için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Kozmetik Ürünleri Uygulama",
+        "neden": "Kozmetik ve uygulamalı bakım hizmetleri için destek sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 33,
+    "meslek": "Cilt Bakım Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Kişisel Bakım",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Cilt Bakımı ve Makyaj",
+        "neden": "Cilt bakımı, makyaj ve uygulamalı kişisel bakım işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Saç Bakımı ve Yapımı",
+        "neden": "Kuaförlük ve salon odaklı geniş hizmetler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Kozmetik Ürünleri Uygulama",
+        "neden": "Kozmetik satış ve uygulama becerileri için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 34,
+    "meslek": "Makyaj Uygulayıcısı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Kişisel Bakım",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Cilt Bakımı ve Makyaj",
+        "neden": "Cilt bakımı, makyaj ve uygulamalı kişisel bakım işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Saç Bakımı ve Yapımı",
+        "neden": "Kuaförlük ve salon odaklı geniş hizmetler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Kozmetik Ürünleri Uygulama",
+        "neden": "Kozmetik satış ve uygulama becerileri için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 35,
+    "meslek": "Manikür Pedikür Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Kişisel Bakım",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Cilt Bakımı ve Makyaj",
+        "neden": "Cilt bakımı, makyaj ve uygulamalı kişisel bakım işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Saç Bakımı ve Yapımı",
+        "neden": "Kuaförlük ve salon odaklı geniş hizmetler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Güzellik ve Saç Bakım Hizmetleri",
+        "dal": "Kozmetik Ürünleri Uygulama",
+        "neden": "Kozmetik satış ve uygulama becerileri için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 36,
+    "meslek": "Resepsiyon Görevlisi",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Turizm Konaklama",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Ön Büro",
+        "neden": "Resepsiyon, karşılama ve misafir işlemleri için en uygun daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Rezervasyon",
+        "neden": "Rezervasyon ve planlama süreçleri için doğrudan uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Operasyon",
+        "neden": "Otel ve turizm organizasyonlarının genel işleyişini öğrenmek için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 37,
+    "meslek": "Kat Hizmetleri Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Turizm Konaklama",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Kat Hizmetleri",
+        "neden": "Otel hizmetleri, oda düzeni ve saha uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Operasyon",
+        "neden": "Turizm işletmelerinde genel süreçleri öğrenmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Ön Büro",
+        "neden": "Müşteri ile temas eden görevler için iyi bir alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 38,
+    "meslek": "Rezervasyon Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Turizm Konaklama",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Ön Büro",
+        "neden": "Resepsiyon, karşılama ve misafir işlemleri için en uygun daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Rezervasyon",
+        "neden": "Rezervasyon ve planlama süreçleri için doğrudan uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Operasyon",
+        "neden": "Otel ve turizm organizasyonlarının genel işleyişini öğrenmek için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 39,
+    "meslek": "Turizm Danışma Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Turizm Konaklama",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Kat Hizmetleri",
+        "neden": "Otel hizmetleri, oda düzeni ve saha uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Operasyon",
+        "neden": "Turizm işletmelerinde genel süreçleri öğrenmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Ön Büro",
+        "neden": "Müşteri ile temas eden görevler için iyi bir alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 40,
+    "meslek": "Servis Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Turizm Konaklama",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Kat Hizmetleri",
+        "neden": "Otel hizmetleri, oda düzeni ve saha uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Operasyon",
+        "neden": "Turizm işletmelerinde genel süreçleri öğrenmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Konaklama ve Seyahat Hizmetleri",
+        "dal": "Ön Büro",
+        "neden": "Müşteri ile temas eden görevler için iyi bir alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 41,
+    "meslek": "Hasta Kabul Görevlisi",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Sağlık Destek",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Sağlık Bakım Teknisyenliği",
+        "neden": "Bakım, hasta destek ve temel sağlık hizmetleri için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Hemşire Yardımcılığı",
+        "neden": "Klinik ve bakım süreçlerini tanımak için uygun resmî daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Ebe Yardımcılığı",
+        "neden": "Kadın sağlığı ve bakım süreçlerini tanımak isteyen öğrenciler için alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 42,
+    "meslek": "Tıbbi Sekreter Yardımcısı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Sağlık Destek",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Sağlık Bakım Teknisyenliği",
+        "neden": "Bakım, hasta destek ve temel sağlık hizmetleri için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Hemşire Yardımcılığı",
+        "neden": "Klinik ve bakım süreçlerini tanımak için uygun resmî daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Ebe Yardımcılığı",
+        "neden": "Kadın sağlığı ve bakım süreçlerini tanımak isteyen öğrenciler için alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 43,
+    "meslek": "Yaşlı Bakım Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Sağlık Destek",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Sağlık Bakım Teknisyenliği",
+        "neden": "Bakım, hasta destek ve temel sağlık hizmetleri için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Hemşire Yardımcılığı",
+        "neden": "Klinik ve bakım süreçlerini tanımak için uygun resmî daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Ebe Yardımcılığı",
+        "neden": "Kadın sağlığı ve bakım süreçlerini tanımak isteyen öğrenciler için alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 44,
+    "meslek": "Engelli Bakım Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Sağlık Destek",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Sağlık Bakım Teknisyenliği",
+        "neden": "Bakım, hasta destek ve temel sağlık hizmetleri için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Hemşire Yardımcılığı",
+        "neden": "Klinik ve bakım süreçlerini tanımak için uygun resmî daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Ebe Yardımcılığı",
+        "neden": "Kadın sağlığı ve bakım süreçlerini tanımak isteyen öğrenciler için alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 45,
+    "meslek": "Eczane Destek Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Sağlık Destek",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Sağlık Bakım Teknisyenliği",
+        "neden": "Bakım, hasta destek ve temel sağlık hizmetleri için en güçlü yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Hemşire Yardımcılığı",
+        "neden": "Klinik ve bakım süreçlerini tanımak için uygun resmî daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Sağlık Hizmetleri",
+        "dal": "Ebe Yardımcılığı",
+        "neden": "Kadın sağlığı ve bakım süreçlerini tanımak isteyen öğrenciler için alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 46,
+    "meslek": "Temizlik Görevlisi",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Genel Hizmet",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Halkla İlişkiler",
+        "dal": "Halkla İlişkiler",
+        "neden": "Hizmet ve insan ilişkisi yönü güçlü meslekler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Düzen ve takip gerektiren kurum görevleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Müşteri teması bulunan genel hizmet işlerine yakın bir alternatif sunar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 47,
+    "meslek": "Güvenlik Görevlisi",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Genel Hizmet",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Adalet",
+        "dal": "İnfaz ve Koruma",
+        "neden": "Disiplin, takip ve güvenlik süreçlerine yakın meslekler için uygun bir resmî daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Danışma ve takip gerektiren kurum içi görevler için destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Halkla İlişkiler",
+        "dal": "Halkla İlişkiler",
+        "neden": "Danışma ve karşılama yönü bulunan hizmet işleri için iletişim temeli sağlar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 48,
+    "meslek": "Çağrı Merkezi Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Genel Hizmet",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Halkla İlişkiler",
+        "dal": "Halkla İlişkiler",
+        "neden": "Müşteriyle iletişim, bilgi verme ve yönlendirme işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Ofis, danışma ve kurum içi iletişim süreçleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Müşteri teması ve hizmet odaklı görevler için alternatif oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 49,
+    "meslek": "Danışma Görevlisi",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Genel Hizmet",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Halkla İlişkiler",
+        "dal": "Halkla İlişkiler",
+        "neden": "Müşteriyle iletişim, bilgi verme ve yönlendirme işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Ofis, danışma ve kurum içi iletişim süreçleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Müşteri teması ve hizmet odaklı görevler için alternatif oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 50,
+    "meslek": "Kargo Dağıtım Elemanı",
+    "ana_grup": "Hizmet Meslekleri",
+    "alt_grup": "Genel Hizmet",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Halkla İlişkiler",
+        "dal": "Halkla İlişkiler",
+        "neden": "Hizmet ve insan ilişkisi yönü güçlü meslekler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Düzen ve takip gerektiren kurum görevleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Müşteri teması bulunan genel hizmet işlerine yakın bir alternatif sunar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 51,
+    "meslek": "Terzi",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Tekstil Moda",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tekstil Teknolojisi",
+        "dal": "Hazır Giyim Model Makineciliği",
+        "neden": "Dikiş, kalıp ve giyim üretimi odaklı işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tekstil Teknolojisi",
+        "dal": "Hazır Giyim Konfeksiyon",
+        "neden": "Üretim atölyelerinde çalışmak için güçlü temel sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Moda Tasarım Teknolojileri",
+        "dal": "Moda Tasarım",
+        "neden": "Giyim, stil ve tasarım odaklı yönü güçlendirmek için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 52,
+    "meslek": "Tekstil Makine Operatörü",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Tekstil Moda",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tekstil Teknolojisi",
+        "dal": "Hazır Giyim Konfeksiyon",
+        "neden": "Tekstil üretimi ve atölye uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tekstil Teknolojisi",
+        "dal": "Hazır Giyim Model Makineciliği",
+        "neden": "Makine kullanımını ve üretim kalitesini geliştirmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Moda Tasarım Teknolojileri",
+        "dal": "Moda Tasarım",
+        "neden": "Moda odaklı üretim alanlarına geçiş için alternatif sunar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 53,
+    "meslek": "Model Makineci",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Tekstil Moda",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tekstil Teknolojisi",
+        "dal": "Hazır Giyim Model Makineciliği",
+        "neden": "Dikiş, kalıp ve giyim üretimi odaklı işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tekstil Teknolojisi",
+        "dal": "Hazır Giyim Konfeksiyon",
+        "neden": "Üretim atölyelerinde çalışmak için güçlü temel sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Moda Tasarım Teknolojileri",
+        "dal": "Moda Tasarım",
+        "neden": "Giyim, stil ve tasarım odaklı yönü güçlendirmek için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 54,
+    "meslek": "Ütü Paket Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Tekstil Moda",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tekstil Teknolojisi",
+        "dal": "Hazır Giyim Konfeksiyon",
+        "neden": "Tekstil üretimi ve atölye uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tekstil Teknolojisi",
+        "dal": "Hazır Giyim Model Makineciliği",
+        "neden": "Makine kullanımını ve üretim kalitesini geliştirmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Moda Tasarım Teknolojileri",
+        "dal": "Moda Tasarım",
+        "neden": "Moda odaklı üretim alanlarına geçiş için alternatif sunar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 55,
+    "meslek": "Moda Atölye Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Tekstil Moda",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tekstil Teknolojisi",
+        "dal": "Hazır Giyim Konfeksiyon",
+        "neden": "Tekstil üretimi ve atölye uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tekstil Teknolojisi",
+        "dal": "Hazır Giyim Model Makineciliği",
+        "neden": "Makine kullanımını ve üretim kalitesini geliştirmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Moda Tasarım Teknolojileri",
+        "dal": "Moda Tasarım",
+        "neden": "Moda odaklı üretim alanlarına geçiş için alternatif sunar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 56,
+    "meslek": "Mobilya Ustası",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Ahşap Mobilya",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "İç Mekân ve Mobilya Teknolojisi",
+        "neden": "Mobilya üretimi, montaj ve ahşap uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "Mobilya İskeleti ve Döşemesi",
+        "neden": "Oturma grupları ve döşemeli ürünlerde çalışmak için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "Ahşap Doğrama Teknolojisi",
+        "neden": "Kapı, pencere ve ahşap doğrama işlerine yakın bir alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 57,
+    "meslek": "Marangoz Yardımcısı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Ahşap Mobilya",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "İç Mekân ve Mobilya Teknolojisi",
+        "neden": "Mobilya üretimi, montaj ve ahşap uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "Mobilya İskeleti ve Döşemesi",
+        "neden": "Oturma grupları ve döşemeli ürünlerde çalışmak için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "Ahşap Doğrama Teknolojisi",
+        "neden": "Kapı, pencere ve ahşap doğrama işlerine yakın bir alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 58,
+    "meslek": "Mobilya Montaj Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Ahşap Mobilya",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "İç Mekân ve Mobilya Teknolojisi",
+        "neden": "Mobilya üretimi, montaj ve ahşap uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "Mobilya İskeleti ve Döşemesi",
+        "neden": "Oturma grupları ve döşemeli ürünlerde çalışmak için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "Ahşap Doğrama Teknolojisi",
+        "neden": "Kapı, pencere ve ahşap doğrama işlerine yakın bir alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 59,
+    "meslek": "İç Mekan Üretim Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Ahşap Mobilya",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "İç Mekân ve Mobilya Teknolojisi",
+        "neden": "Mobilya üretimi, montaj ve ahşap uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "Mobilya İskeleti ve Döşemesi",
+        "neden": "Oturma grupları ve döşemeli ürünlerde çalışmak için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "Ahşap Doğrama Teknolojisi",
+        "neden": "Kapı, pencere ve ahşap doğrama işlerine yakın bir alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 60,
+    "meslek": "Ahşap Boya Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Ahşap Mobilya",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "İç Mekân ve Mobilya Teknolojisi",
+        "neden": "Mobilya üretimi, montaj ve ahşap uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "Mobilya İskeleti ve Döşemesi",
+        "neden": "Oturma grupları ve döşemeli ürünlerde çalışmak için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Mobilya ve İç Mekân Tasarımı",
+        "dal": "Ahşap Doğrama Teknolojisi",
+        "neden": "Kapı, pencere ve ahşap doğrama işlerine yakın bir alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 61,
+    "meslek": "Kasap",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Gıda Üretim",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda İşleme",
+        "neden": "Et, süt ve gıda hazırlama süreçlerini öğrenmek için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda Kontrol",
+        "neden": "Hijyen ve ürün güvenliği odaklı çalışma için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Yiyecek İçecek Hizmetleri",
+        "dal": "Yiyecek İçecek Hizmetleri",
+        "neden": "Hazırlama ve servis yönü bulunan işlerde alternatif olabilir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 62,
+    "meslek": "Şarküteri Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Gıda Üretim",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda İşleme",
+        "neden": "Et, süt ve gıda hazırlama süreçlerini öğrenmek için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda Kontrol",
+        "neden": "Hijyen ve ürün güvenliği odaklı çalışma için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Yiyecek İçecek Hizmetleri",
+        "dal": "Yiyecek İçecek Hizmetleri",
+        "neden": "Hazırlama ve servis yönü bulunan işlerde alternatif olabilir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 63,
+    "meslek": "Süt Ürünleri Üretim Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Gıda Üretim",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda İşleme",
+        "neden": "Üretim, paketleme ve temel gıda hazırlama işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda Kontrol",
+        "neden": "Kalite ve hijyen süreçlerini öğrenmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gastronomi ve Mutfak Sanatları",
+        "dal": "Pastacılık ve Ekmekçilik",
+        "neden": "Fırın ve unlu mamul yönüne açılmak isteyenler için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 64,
+    "meslek": "Meyve Sebze İşleme Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Gıda Üretim",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda İşleme",
+        "neden": "Üretim, paketleme ve temel gıda hazırlama işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda Kontrol",
+        "neden": "Kalite ve hijyen süreçlerini öğrenmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gastronomi ve Mutfak Sanatları",
+        "dal": "Pastacılık ve Ekmekçilik",
+        "neden": "Fırın ve unlu mamul yönüne açılmak isteyenler için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 65,
+    "meslek": "Paketleme Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Gıda Üretim",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda İşleme",
+        "neden": "Üretim, paketleme ve temel gıda hazırlama işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gıda Teknolojisi",
+        "dal": "Gıda Kontrol",
+        "neden": "Kalite ve hijyen süreçlerini öğrenmek için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Gastronomi ve Mutfak Sanatları",
+        "dal": "Pastacılık ve Ekmekçilik",
+        "neden": "Fırın ve unlu mamul yönüne açılmak isteyenler için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 66,
+    "meslek": "Baskı Operatörü",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Matbaa Grafik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Matbaa Teknolojisi",
+        "dal": "Baskı Öncesi",
+        "neden": "Baskı hazırlık ve matbaa süreçlerini öğrenmek için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Matbaa Teknolojisi",
+        "dal": "Baskı Sonrası",
+        "neden": "Kesim, paketleme ve tamamlayıcı üretim süreçleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Grafik ve Fotoğraf",
+        "dal": "Grafik",
+        "neden": "Dijital görsel hazırlama ve baskı tasarım tarafını güçlendirir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 67,
+    "meslek": "Matbaa Yardımcı Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Matbaa Grafik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Matbaa Teknolojisi",
+        "dal": "Baskı Öncesi",
+        "neden": "Baskı hazırlık ve matbaa süreçlerini öğrenmek için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Matbaa Teknolojisi",
+        "dal": "Baskı Sonrası",
+        "neden": "Kesim, paketleme ve tamamlayıcı üretim süreçleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Grafik ve Fotoğraf",
+        "dal": "Grafik",
+        "neden": "Dijital görsel hazırlama ve baskı tasarım tarafını güçlendirir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 68,
+    "meslek": "Tabela Uygulama Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Matbaa Grafik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Grafik ve Fotoğraf",
+        "dal": "Grafik",
+        "neden": "Tabela, görsel tasarım ve baskı uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Grafik ve Fotoğraf",
+        "dal": "Fotoğraf",
+        "neden": "Görsel üretim ve uygulama tarafı için destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Matbaa Teknolojisi",
+        "dal": "Baskı Öncesi",
+        "neden": "Dijital baskı ve hazırlık süreçleri için güçlü temel sunar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 69,
+    "meslek": "Dijital Baskı Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Matbaa Grafik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Matbaa Teknolojisi",
+        "dal": "Baskı Öncesi",
+        "neden": "Baskı hazırlık ve matbaa süreçlerini öğrenmek için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Matbaa Teknolojisi",
+        "dal": "Baskı Sonrası",
+        "neden": "Kesim, paketleme ve tamamlayıcı üretim süreçleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Grafik ve Fotoğraf",
+        "dal": "Grafik",
+        "neden": "Dijital görsel hazırlama ve baskı tasarım tarafını güçlendirir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 70,
+    "meslek": "Ambalaj Üretim Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Matbaa Grafik",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Grafik ve Fotoğraf",
+        "dal": "Grafik",
+        "neden": "Tabela, görsel tasarım ve baskı uygulamaları için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Grafik ve Fotoğraf",
+        "dal": "Fotoğraf",
+        "neden": "Görsel üretim ve uygulama tarafı için destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Matbaa Teknolojisi",
+        "dal": "Baskı Öncesi",
+        "neden": "Dijital baskı ve hazırlık süreçleri için güçlü temel sunar."
+      }
+    ]
+  },
+  {
+    "meslek_id": 71,
+    "meslek": "Sera İşçisi",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Tarım Üretim",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Bahçıvanlık",
+        "neden": "Bahçe, fide ve peyzaj destekli üretim işleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Tarla Bitkileri Yetiştiriciliği",
+        "neden": "Saha üretimi ve tarımsal uygulamalar için güçlü bir alternatiftir."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Seracılık",
+        "neden": "Sera ve kontrollü yetiştiricilik süreçleri için en uygun yollardan biridir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 72,
+    "meslek": "Bahçe Bakım Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Tarım Üretim",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Bahçıvanlık",
+        "neden": "Bahçe, fide ve peyzaj destekli üretim işleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Tarla Bitkileri Yetiştiriciliği",
+        "neden": "Saha üretimi ve tarımsal uygulamalar için güçlü bir alternatiftir."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Seracılık",
+        "neden": "Sera ve kontrollü yetiştiricilik süreçleri için en uygun yollardan biridir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 73,
+    "meslek": "Tarım Makinesi Destek Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Tarım Üretim",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Bahçıvanlık",
+        "neden": "Bahçe, fide ve peyzaj destekli üretim işleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Tarla Bitkileri Yetiştiriciliği",
+        "neden": "Saha üretimi ve tarımsal uygulamalar için güçlü bir alternatiftir."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Seracılık",
+        "neden": "Sera ve kontrollü yetiştiricilik süreçleri için en uygun yollardan biridir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 74,
+    "meslek": "Fide Üretim Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Tarım Üretim",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Bahçıvanlık",
+        "neden": "Bahçe, fide ve peyzaj destekli üretim işleri için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Tarla Bitkileri Yetiştiriciliği",
+        "neden": "Saha üretimi ve tarımsal uygulamalar için güçlü bir alternatiftir."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Seracılık",
+        "neden": "Sera ve kontrollü yetiştiricilik süreçleri için en uygun yollardan biridir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 75,
+    "meslek": "Hayvan Bakım Elemanı",
+    "ana_grup": "Üretim Meslekleri",
+    "alt_grup": "Tarım Üretim",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Hayvan Yetiştiriciliği ve Sağlığı",
+        "dal": "Büyükbaş ve Küçükbaş Hayvan Yetiştiriciliği",
+        "neden": "Hayvan bakım ve yetiştiricilik odaklı işler için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Hayvan Yetiştiriciliği ve Sağlığı",
+        "dal": "Kanatlı Hayvan Yetiştiriciliği",
+        "neden": "Kümes ve üretim temelli işletmeler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Tarım",
+        "dal": "Tarla Bitkileri Yetiştiriciliği",
+        "neden": "Tarımsal üretim süreçlerini birlikte öğrenmek için uygundur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 76,
+    "meslek": "Satış Danışmanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Satış Perakende",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Mağaza, satış ve müşteri ilişkileri odaklı işler için en uygun daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "E-Ticaret",
+        "neden": "Dijital satış ve ürün yönetimi tarafı için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Bilgisayarlı Muhasebe",
+        "neden": "Kasiyerlik ve perakende kayıt süreçleri için yardımcı olur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 77,
+    "meslek": "Kasiyer",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Satış Perakende",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Mağaza, satış ve müşteri ilişkileri odaklı işler için en uygun daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "E-Ticaret",
+        "neden": "Dijital satış ve ürün yönetimi tarafı için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Bilgisayarlı Muhasebe",
+        "neden": "Kasiyerlik ve perakende kayıt süreçleri için yardımcı olur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 78,
+    "meslek": "Reyon Görevlisi",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Satış Perakende",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Mağaza, satış ve müşteri ilişkileri odaklı işler için en uygun daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "E-Ticaret",
+        "neden": "Dijital satış ve ürün yönetimi tarafı için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Bilgisayarlı Muhasebe",
+        "neden": "Kasiyerlik ve perakende kayıt süreçleri için yardımcı olur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 79,
+    "meslek": "Mağaza Düzenleme Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Satış Perakende",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Mağaza, satış ve müşteri ilişkileri odaklı işler için en uygun daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "E-Ticaret",
+        "neden": "Dijital satış ve ürün yönetimi tarafı için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Bilgisayarlı Muhasebe",
+        "neden": "Kasiyerlik ve perakende kayıt süreçleri için yardımcı olur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 80,
+    "meslek": "Müşteri Temsilcisi",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Satış Perakende",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Mağaza, satış ve müşteri ilişkileri odaklı işler için en uygun daldır."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "E-Ticaret",
+        "neden": "Dijital satış ve ürün yönetimi tarafı için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Bilgisayarlı Muhasebe",
+        "neden": "Kasiyerlik ve perakende kayıt süreçleri için yardımcı olur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 81,
+    "meslek": "Depo Görevlisi",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Lojistik Depo",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Ulaştırma Hizmetleri",
+        "dal": "Lojistik",
+        "neden": "Depo, sevkiyat ve kargo süreçleri için en uygun resmî yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Stok ve ürün hareketi olan mağaza/depo işlerinde destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Sevkiyat, evrak ve düzen takibi için yardımcı temel oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 82,
+    "meslek": "Stok Takip Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Lojistik Depo",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Ulaştırma Hizmetleri",
+        "dal": "Lojistik",
+        "neden": "Depo, sevkiyat ve kargo süreçleri için en uygun resmî yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Stok ve ürün hareketi olan mağaza/depo işlerinde destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Sevkiyat, evrak ve düzen takibi için yardımcı temel oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 83,
+    "meslek": "Sevkiyat Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Lojistik Depo",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Ulaştırma Hizmetleri",
+        "dal": "Lojistik",
+        "neden": "Depo, sevkiyat ve kargo süreçleri için en uygun resmî yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Stok ve ürün hareketi olan mağaza/depo işlerinde destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Sevkiyat, evrak ve düzen takibi için yardımcı temel oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 84,
+    "meslek": "Forklift Operatörü Yardımcısı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Lojistik Depo",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Ulaştırma Hizmetleri",
+        "dal": "Lojistik",
+        "neden": "Depo, sevkiyat ve kargo süreçleri için en uygun resmî yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Stok ve ürün hareketi olan mağaza/depo işlerinde destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Sevkiyat, evrak ve düzen takibi için yardımcı temel oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 85,
+    "meslek": "Paketleme ve Kargo Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Lojistik Depo",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Ulaştırma Hizmetleri",
+        "dal": "Lojistik",
+        "neden": "Depo, sevkiyat ve kargo süreçleri için en uygun resmî yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Stok ve ürün hareketi olan mağaza/depo işlerinde destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Sevkiyat, evrak ve düzen takibi için yardımcı temel oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 86,
+    "meslek": "Ön Muhasebe Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Muhasebe Ofis",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Bilgisayarlı Muhasebe",
+        "neden": "Ön muhasebe, fatura ve ofis kayıt işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Dış Ticaret Ofis Hizmetleri",
+        "neden": "Ofis evrakı, işlem ve takip süreçlerine yakın görevler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Düzen, kayıt ve ofis destek görevleri için güçlü alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 87,
+    "meslek": "Ofis Destek Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Muhasebe Ofis",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Bilgisayarlı Muhasebe",
+        "neden": "Ön muhasebe, fatura ve ofis kayıt işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Dış Ticaret Ofis Hizmetleri",
+        "neden": "Ofis evrakı, işlem ve takip süreçlerine yakın görevler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Düzen, kayıt ve ofis destek görevleri için güçlü alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 88,
+    "meslek": "Evrak Kayıt Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Muhasebe Ofis",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Bilgisayarlı Muhasebe",
+        "neden": "Ön muhasebe, fatura ve ofis kayıt işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Dış Ticaret Ofis Hizmetleri",
+        "neden": "Ofis evrakı, işlem ve takip süreçlerine yakın görevler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Düzen, kayıt ve ofis destek görevleri için güçlü alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 89,
+    "meslek": "Fatura Takip Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Muhasebe Ofis",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Bilgisayarlı Muhasebe",
+        "neden": "Ön muhasebe, fatura ve ofis kayıt işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Dış Ticaret Ofis Hizmetleri",
+        "neden": "Ofis evrakı, işlem ve takip süreçlerine yakın görevler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Düzen, kayıt ve ofis destek görevleri için güçlü alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 90,
+    "meslek": "Büro Memuru Yardımcısı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Muhasebe Ofis",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Bilgisayarlı Muhasebe",
+        "neden": "Ön muhasebe, fatura ve ofis kayıt işleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Muhasebe ve Finansman",
+        "dal": "Dış Ticaret Ofis Hizmetleri",
+        "neden": "Ofis evrakı, işlem ve takip süreçlerine yakın görevler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Düzen, kayıt ve ofis destek görevleri için güçlü alternatiftir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 91,
+    "meslek": "E-Ticaret Paketleme Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Dijital Ticaret",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "E-Ticaret",
+        "neden": "Ürün girişi, çevrim içi satış ve dijital mağaza süreçleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Yazılım Geliştirme",
+        "neden": "Dijital sistem ve web altyapısını anlamak için destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Müşteri ve ürün yönetimi tarafını güçlendirir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 92,
+    "meslek": "Ürün Giriş Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Dijital Ticaret",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "E-Ticaret",
+        "neden": "Ürün girişi, çevrim içi satış ve dijital mağaza süreçleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Yazılım Geliştirme",
+        "neden": "Dijital sistem ve web altyapısını anlamak için destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Müşteri ve ürün yönetimi tarafını güçlendirir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 93,
+    "meslek": "Sosyal Medya Destek Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Dijital Ticaret",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "E-Ticaret",
+        "neden": "Ürün girişi, çevrim içi satış ve dijital mağaza süreçleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Yazılım Geliştirme",
+        "neden": "Dijital sistem ve web altyapısını anlamak için destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Müşteri ve ürün yönetimi tarafını güçlendirir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 94,
+    "meslek": "Canlı Destek Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Dijital Ticaret",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "E-Ticaret",
+        "neden": "Ürün girişi, çevrim içi satış ve dijital mağaza süreçleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Yazılım Geliştirme",
+        "neden": "Dijital sistem ve web altyapısını anlamak için destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Müşteri ve ürün yönetimi tarafını güçlendirir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 95,
+    "meslek": "İçerik Yükleme Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Dijital Ticaret",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "E-Ticaret",
+        "neden": "Ürün girişi, çevrim içi satış ve dijital mağaza süreçleri için en uygun yoldur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Bilişim Teknolojileri",
+        "dal": "Yazılım Geliştirme",
+        "neden": "Dijital sistem ve web altyapısını anlamak için destek sağlar."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Müşteri ve ürün yönetimi tarafını güçlendirir."
+      }
+    ]
+  },
+  {
+    "meslek_id": 96,
+    "meslek": "Emlak Ofisi Destek Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Yerel Hizmet",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Yerel işletmelerde satış ve müşteri ilişkisi odaklı işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Ofis, kayıt ve takip gerektiren görevler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Ulaştırma Hizmetleri",
+        "dal": "Lojistik",
+        "neden": "Kurye ve sipariş düzenleme yönü bulunan görevler için alternatif oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 97,
+    "meslek": "Otopark Görevlisi",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Yerel Hizmet",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Yerel işletmelerde satış ve müşteri ilişkisi odaklı işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Ofis, kayıt ve takip gerektiren görevler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Ulaştırma Hizmetleri",
+        "dal": "Lojistik",
+        "neden": "Kurye ve sipariş düzenleme yönü bulunan görevler için alternatif oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 98,
+    "meslek": "Market Sipariş Toplama Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Yerel Hizmet",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Yerel işletmelerde satış ve müşteri ilişkisi odaklı işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Ofis, kayıt ve takip gerektiren görevler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Ulaştırma Hizmetleri",
+        "dal": "Lojistik",
+        "neden": "Kurye ve sipariş düzenleme yönü bulunan görevler için alternatif oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 99,
+    "meslek": "Kırtasiye Satış Elemanı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Yerel Hizmet",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Yerel işletmelerde satış ve müşteri ilişkisi odaklı işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Ofis, kayıt ve takip gerektiren görevler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Ulaştırma Hizmetleri",
+        "dal": "Lojistik",
+        "neden": "Kurye ve sipariş düzenleme yönü bulunan görevler için alternatif oluşturur."
+      }
+    ]
+  },
+  {
+    "meslek_id": 100,
+    "meslek": "Kurye Yardımcısı",
+    "ana_grup": "Ticaret ve Ofis Meslekleri",
+    "alt_grup": "Yerel Hizmet",
+    "meb_yollari": [
+      {
+        "oncelik": "Ana Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Pazarlama ve Perakende",
+        "dal": "Satış Danışmanlığı",
+        "neden": "Yerel işletmelerde satış ve müşteri ilişkisi odaklı işler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Büro Yönetimi",
+        "dal": "Yönetici Sekreterliği",
+        "neden": "Ofis, kayıt ve takip gerektiren görevler için uygundur."
+      },
+      {
+        "oncelik": "Alternatif Yol",
+        "okul_turu": "Mesleki ve Teknik Anadolu Lisesi",
+        "alan": "Ulaştırma Hizmetleri",
+        "dal": "Lojistik",
+        "neden": "Kurye ve sipariş düzenleme yönü bulunan görevler için alternatif oluşturur."
+      }
+    ]
+  }
+]
